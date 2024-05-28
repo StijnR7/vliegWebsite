@@ -13,22 +13,22 @@
     <div class="loginlijn">
         <div class="section" id="loginbak">
             <h2>Login</h2>
-            <form id="loginform">
-                <input type="text" placeholder="Username" required>
-                <input type="password" placeholder="Password" required>
+            <form id="loginform" method="post" action="login.php">
+                <input name="username" type="text" placeholder="Username" required>
+                <input name="password" type="password" placeholder="Password" required>
                 <button type="submit">Login</button>
                 <p><a href="#" id="vergeet">Vergeet Password?</a></p>
                 <p>Heb je geen account? <a href="#" id="registerLink">Register</a></p>
             </form>
+            
         </div>
 
         <div class="section" id="registerbak">
             <h2>Register</h2>
-            <form id="registerform">
-                <input type="text" placeholder="Username" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <input type="password" placeholder="Confirm Password" required>
+            <form id="registerform" method="post" action="registreer.php">
+                <input type="text" placeholder="Username" name="username" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="password" placeholder="Password" name="password" required>
                 <button type="submit">Register</button>
                 <p>Je hebt al een account? <a href="#" id="loginLink">Login</a></p>
             </form>
