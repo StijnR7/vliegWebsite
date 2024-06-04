@@ -12,9 +12,9 @@
             <div class="logo"><h1><a href="index.php">Logo</a></h1></div>
             <div class="bar">
                 <h1><a href="index.php">Home</a></h1>
-                <h1><a href="index.php">Home</a></h1>
-                <h1><a href="index.php">Home</a></h1>
-                <h1><a href="index.php">Home</a></h1>
+                <h1><a href="index.php">Over ons</a></h1>
+                <h1><a href="index.php">Reizen</a></h1>
+                <h1><a href="index.php">Contact</a></h1>
             </div>
             <div class="login">
                 <h1><a href="inlog.php">Login</a></h1>
