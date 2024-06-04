@@ -52,7 +52,7 @@ echo '
 <p> Vertrek Stad: ' . $vertrekStad .'</p>
 <p> Vertrek Land: ' . $vertrekLand .'</p>
 <p> Prijs: ' . $Prijs  .'</p>
-<form action="boek.php" method="POST">
+<form action="boekreis.php" method="POST">
   <input type="hidden" name="vluchtID" value="' . $vluchtID . '">
   <button type="submit"> Boek</button>
 
