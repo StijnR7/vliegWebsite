@@ -1,5 +1,4 @@
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -7,32 +6,33 @@ body {
     font-family: Arial, sans-serif;
     background: #f4f4f4;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 8000px;
 }
 header {
     display: flex;
     justify-content: center;
-    position: absolute;
-    top: 0;
-    width: 100vw;
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    width: calc(100% - 20px);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
 }
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90vw;
-    height: 70px;
-    background-color: #f4f4f4;
-    border-radius: 15px;
-    padding: 0 20px;
-    z-index: 1000;
+    width: 100%;
 }
 
 .logo {
     flex: 1;
-    margin-left: 20px;
 }
 
 .logo h1 a {
@@ -44,22 +44,22 @@ nav {
     display: flex;
     flex: 2;
     justify-content: center;
-    gap: 2vw;
+    gap: 1.5vw;
 }
 
 .bar h1 a {
     text-decoration: none;
     color: white;
     background-color: blue;
-    padding: 10px 20px;
+    padding: 8px 15px;
     border-radius: 5px;
+    font-size: 0.9em; 
 }
 
 .login {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    margin-right: 20px;
 }
 
 .login h1 a {
@@ -69,13 +69,14 @@ nav {
 
 .loginlijn {
     position: relative;
-    width: 400px;
-    height: auto; /* Adjusted for height flexibility */
+    width: 90%;
+    max-width: 400px;
     padding: 20px;
     background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
+    margin-top: 250px; 
 }
 
 .section {
@@ -87,15 +88,14 @@ nav {
 }
 
 input[type="text"], input[type="email"], input[type="password"] {
-    width: calc(100% - 20px);
+    width: 100%;
     padding: 10px;
-    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 button {
-    width: calc(100% - 20px);
+    width: 100%;
     padding: 10px;
     border: none;
     background-color: rgb(40, 187, 255);
@@ -104,20 +104,21 @@ button {
     cursor: pointer;
 }
 
-.slideshowbak {
-    max-width: 100vw;
-    position: relative;
-    margin: auto;
-    height: 400px;
+.slideshow-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
 }
 
 .mySlides {
     display: none;
-    width: 100%;
-    height: 600px;
+    width: 100vw;
+    height: 100vh;
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
 }
 
 .fade {
@@ -138,7 +139,7 @@ button:hover {
 }
 
 p {
-    margin: 10px 0;
+    padding: 10px 0;
 }
 
 a {
@@ -149,31 +150,292 @@ a {
 a:hover {
     text-decoration: underline;
 }
-.slideshow-container {
-    max-width: 100vw;
-    position: relative;
-    margin: auto;
-    height: 400px;
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
 }
 
-.mySlides {
-    display: none;
+.prev {
+    left: 10px;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 10px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.overlay {
+    position: relative;
+    top: 500px;
     width: 100%;
-    height: 600px;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+.mooitekst {
+    padding-bottom: 30px;
+}
+
+.formvliegut form {
+    display: flex;
+    justify-content: center;
+}
+
+.formvliegut input, .formvliegut button {
+    padding: 0 5px;
+}
+
+.vakantie-deals {
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    top: 50px;
+    z-index: 1;
+}
+
+.image-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.block {
+    flex: 1 1 100%;
+    max-width: 100%;
+    position: relative;
+    height: 200px;
+}
+
+@media (min-width: 600px) {
+    .block {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+@media (min-width: 900px) {
+    .block {
+        flex: 1 1 30%;
+        max-width: 30%;
+    }
+}
+
+.block.large {
+    flex: 1 1 100%;
+    height: 410px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
+    position: relative;
     border-radius: 10px;
 }
 
-.fade {
-    animation-duration: 10s;
+.sale {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-@keyframes fade {
-    from {
-        opacity: .4;
-    }
-    to {
-        opacity: 1;
-    }
+.vakantie-deals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.red-block {
+    width: 100%;
+    text-align: center;
+    background-color: red;
+    color: white;
+    padding: 10px 0;
+}
+
+.sale-block {
+    position: relative;
+    padding: 20px;
+}
+
+.sale-block img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+}
+
+.sale-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.footer-bar {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.product-table {
+    width: 100%;
+    padding-top: 50px;
+    border-spacing: 20px;
+}
+
+.product-table td {
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+}
+
+.product-wrapper {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-top: 50px;
+}
+
+.product-name {
+    font-weight: bold;
+}
+
+.product-oms,
+.product-price,
+.product-cat {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.product-form {
+    padding-top: 10px;
+}
+
+.add-to-cart-btn {
+    background-color: #FFA500;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #FF7F00;
+}
+
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+.contact-bak {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: vervagen 1s ease-in-out;
+}
+
+@keyframes vervagen {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.contact-bak h2 {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.veldje {
+    padding-bottom: 20px;
+}
+
+.veldje label {
+    display: block;
+    padding-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.veldje input, .veldje textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.veldje input:focus, .veldje textarea:focus {
+    border-color: #40b3ff;
+    outline: none;
+}
+
+.veldje textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.knoppie {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #40b3ff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.knoppie:hover {
+    background-color: #0099ff;
+    transform: translateY(-2px);
+}
+
+.knoppie:active {
+    background-color: #007acc;
+    transform: translateY(0);
 }

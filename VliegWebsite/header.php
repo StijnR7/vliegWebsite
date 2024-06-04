@@ -11,10 +11,12 @@
         <nav>
             <div class="logo"><h1><a href="index.php">Logo</a></h1></div>
             <div class="bar">
+
                 <h1><a href="index.php  ">Home</a></h1>
                 <h1><a href="reviews.php">Reviews</a></h1>
                 <h1><a href="index.php">Home</a></h1>
                 <h1><a href="index.php">Home</a></h1>
+
             </div>
             <div class="login">
                 <h1><a href="inlog.php">Login</a></h1>
