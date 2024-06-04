@@ -1,6 +1,6 @@
 <?php 
 include('connection.php');
-
+session_start();
 $user = $_POST['username'];
 
 $pass = $_POST['password'];
@@ -31,20 +31,17 @@ elseif ($key1 == 'password'){
 elseif ($key1 == 'email'){
   $email = $value1;
 }
+elseif ($key1 == 'userID'){
+  $userID = $value1;
+}
 
 }
 $_SESSION["username"] = $user;
+$_SESSION["userID"] = $userID;
 $_SESSION["password"] = $pass;
 $_SESSION["email"] = $email;
 
-echo '
-  <p> Username: ' . $_SESSION["username"] .'</p>
-  <p> Password: ' . $_SESSION["password"] .'</p>
-  <p> E-mail: ' . $_SESSION["email"] .'</p>
-
-
-
-  ';
+include("index.php");
 }}
 
 ?>
