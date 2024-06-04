@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Admin Pagina</title>
     <link rel="stylesheet" href="css/styles.css">
+=======
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+>>>>>>> be46b9b64106d4e07fb175e7e4fb30fddfa29b1f
 </head>
 <body>
     <?php include ('header.php'); ?>
@@ -45,7 +50,7 @@
                                 echo '<p class="product-cat">Categorie: '.$product['Categorie'].'</p>';
                                 echo '<form class="product-form" action="bestel.php" method="POST">';
                                 echo '<input type="hidden" name="product_id" value="'.$product['id'].'">';
-                                echo '<input type="submit" value="Toevoegen" class="add-to-cart-btn">';
+                                echo '<input type="submit" value="update" class="add-to-cart-btn">';
                                 echo '</form>';
                                 echo '</div>';
                                 echo '</div>';
