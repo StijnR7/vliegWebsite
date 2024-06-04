@@ -34,6 +34,11 @@
                 <table class="product-table">
                     <tr>
                      
+
+                              <?php 
+                              include('vakanties.php');
+                              ?>
+
                     </tr>
                 </table>
             </div>
