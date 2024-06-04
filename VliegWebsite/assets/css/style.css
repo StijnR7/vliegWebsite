@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     align-items: center;
     height: 8000px;
+    margin: 0;
 }
 header {
     display: flex;
@@ -90,6 +91,7 @@ nav {
 input[type="text"], input[type="email"], input[type="password"] {
     width: 100%;
     padding: 10px;
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -139,7 +141,7 @@ button:hover {
 }
 
 p {
-    padding: 10px 0;
+    margin: 10px 0;
 }
 
 a {
@@ -188,7 +190,7 @@ a:hover {
 }
 
 .mooitekst {
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .formvliegut form {
@@ -197,7 +199,7 @@ a:hover {
 }
 
 .formvliegut input, .formvliegut button {
-    padding: 0 5px;
+    margin: 0 5px;
 }
 
 .vakantie-deals {
@@ -221,6 +223,7 @@ a:hover {
 .block {
     flex: 1 1 100%;
     max-width: 100%;
+    margin: 10px;
     position: relative;
     height: 200px;
 }
@@ -267,7 +270,7 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 50px;
+    margin-top: 50px;
 }
 
 .red-block {
@@ -280,7 +283,7 @@ a:hover {
 
 .sale-block {
     position: relative;
-    padding: 20px;
+    margin: 20px;
 }
 
 .sale-block img {
@@ -311,7 +314,7 @@ a:hover {
 
 .product-table {
     width: 100%;
-    padding-top: 50px;
+    margin: 50px auto 0;
     border-spacing: 20px;
 }
 
@@ -326,7 +329,7 @@ a:hover {
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding-top: 50px;
+    margin-top: 50px;
 }
 
 .product-name {
@@ -336,12 +339,12 @@ a:hover {
 .product-oms,
 .product-price,
 .product-cat {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .product-form {
-    padding-top: 10px;
+    margin-top: 10px;
 }
 
 .add-to-cart-btn {
@@ -365,77 +368,4 @@ a:hover {
 
 .content-section.active {
     display: block;
-}
-.contact-bak {
-    width: 100%;
-    max-width: 600px;
-    background: white;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    animation: vervagen 1s ease-in-out;
-}
-
-@keyframes vervagen {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.contact-bak h2 {
-    text-align: center;
-    padding-bottom: 20px;
-    font-size: 2em;
-    color: #333;
-}
-
-.veldje {
-    padding-bottom: 20px;
-}
-
-.veldje label {
-    display: block;
-    padding-bottom: 5px;
-    font-weight: bold;
-    color: #555;
-}
-
-.veldje input, .veldje textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-    transition: border-color 0.3s;
-}
-
-.veldje input:focus, .veldje textarea:focus {
-    border-color: #40b3ff;
-    outline: none;
-}
-
-.veldje textarea {
-    resize: vertical;
-    height: 150px;
-}
-
-.knoppie {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    background-color: #40b3ff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2em;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.knoppie:hover {
-    background-color: #0099ff;
-    transform: translateY(-2px);
-}
-
-.knoppie:active {
-    background-color: #007acc;
-    transform: translateY(0);
 }
