@@ -1,21 +1,39 @@
-document.getElementById('createLink').addEventListener('click', function(event) {
-    event.preventDefault();
-    showSection('createbak');
-});
+document.addEventListener('DOMContentLoaded', function() {
+    const createbak = document.getElementById('createbak');
+    const updatebak = document.getElementById('updatebak');
+    const deletebak = document.getElementById('deletebak');
 
-document.getElementById('updateLink').addEventListener('click', function(event) {
-    event.preventDefault();
-    showSection('updatebak');
-});
+    const createLink = document.getElementById('createLink');
+    const updateLink = document.getElementById('updateLink');
+    const deleteLink = document.getElementById('deleteLink');
+    
 
-document.getElementById('deleteLink').addEventListener('click', function(event) {
-    event.preventDefault();
-    showSection('deletebak');
-});
+    if (updateLink) {
+        updateLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            createbak.classList.remove('active');
+            deletebak.classList.remove('active');
+            updatebak.classList.add('active');
+        });
+    }
 
-function showSection(sectionId) {
-    document.querySelectorAll('.content-section').forEach(function(section) {
-        section.classList.remove('active');
-    });
-    document.getElementById(sectionId).classList.add('active');
-}
+    if (createLink) {
+        createLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            updatebak.classList.remove('active');
+            deletebak.classList.remove('active');
+            createbak.classList.add('active');
+        });
+    }
+
+    if (deleteLink) {
+        deleteLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            createbak.classList.remove('active');
+            updatebak.classList.remove('active');
+            deletebak.classList.add('active');
+        });
+    }
+
+    createbak.classList.add('active');
+});

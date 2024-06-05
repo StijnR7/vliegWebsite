@@ -45,7 +45,7 @@ nav {
     display: flex;
     flex: 2;
     justify-content: center;
-    gap: 1.5vw;
+    gap: 7vw;
 }
 
 .bar h1 a {
@@ -53,7 +53,7 @@ nav {
     color: white;
     background-color: rgb(57, 222, 255);
     padding: 8px 15px;
-    border-radius: 5px;
+    border-radius: 25px;
     font-size: 0.9em; 
 }
 
@@ -140,9 +140,9 @@ button:hover {
     background-color: darkblue;
 }
 
-/* wat de kanker bro */
+
 p {
-    margin: 10px 0;
+    padding: 10px 0;
 }
 
 a {
@@ -191,9 +191,14 @@ a:hover {
 }
 
 .mooitekst {
-    margin-bottom: 30px;
-}
+    margin-bottom: 60px;
 
+}
+.mooitekst p{
+    border-radius: 5px;
+    background-color: rgb(171, 252, 252);
+    opacity: 5;
+}
 .formvliegut form {
     display: flex;
     justify-content: center;
@@ -373,4 +378,19 @@ a:hover {
 .rijtje{
 background-color: aquamarine;
 
+}
+.section-form{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+.veldje{
+    padding: 5px;
+}
+.section-form{
+    display: none;
+}
+.section-form.active{
+    display: block;
 }

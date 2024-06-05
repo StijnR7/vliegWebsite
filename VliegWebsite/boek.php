@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<?php include ('header.php'); ?>
 <div class="formvliegut">
                 <form id="rijtje">
                     <input type="text" placeholder="Vertrekpunt">
