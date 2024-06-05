@@ -51,7 +51,7 @@ nav {
 .bar h1 a {
     text-decoration: none;
     color: white;
-    background-color: blue;
+    background-color: rgb(57, 222, 255);
     padding: 8px 15px;
     border-radius: 5px;
     font-size: 0.9em; 
@@ -369,4 +369,8 @@ a:hover {
 
 .content-section.active {
     display: block;
+}
+.rijtje{
+background-color: aquamarine;
+
 }

@@ -1,15 +1,10 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Admin Pagina</title>
+    <title>Admin Page</title>
     <link rel="stylesheet" href="css/styles.css">
-=======
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
->>>>>>> be46b9b64106d4e07fb175e7e4fb30fddfa29b1f
 </head>
 <body>
     <?php include ('header.php'); ?>
@@ -17,54 +12,84 @@
     <main>
         <div id="createbak" class="content-section active">
             <div class="contact-bak">
-                <h2>Nieuw Product Aanmaken</h2>
+                <h2>Create New Product</h2>
                 <form id="createForm">
                     <div class="veldje">
-                        <label for="productName">Product Naam</label>
-                        <input type="text" id="productName" placeholder="Product Naam" required>
+                        <label for="productName">Product Name</label>
+                        <input type="text" id="productName" placeholder="Product Name" required>
                     </div>
                     <div class="veldje">
-                        <label for="price">Prijs</label>
-                        <input type="number" id="price" placeholder="Prijs" required>
+                        <label for="price">Price</label>
+                        <input type="number" id="price" placeholder="Price" required>
                     </div>
                     <div class="veldje">
-                        <label for="description">Beschrijving</label>
-                        <textarea id="description" placeholder="Beschrijving"></textarea>
+                        <label for="description">Description</label>
+                        <textarea id="description" placeholder="Description"></textarea>
                     </div>
-                    <button type="submit" class="knoppie">Aanmaken</button>
+                    <button type="submit" class="knoppie">Create</button>
                 </form>
-                <p><a href="#" id="updateLink">Schakel over naar Product Bijwerken</a> | <a href="#" id="deleteLink">Schakel over naar Product Verwijderen</a></p>
+                <p><a href="#" id="updateLink">Switch to Update Product</a> | <a href="#" id="deleteLink">Switch to Delete Product</a></p>
 
                 <table class="product-table">
                     <tbody>
-                        <?php
-                            // Loop door de producten en toon elk product
-                            foreach ($producten as $product) {
-                                echo '<tr>';
-                                echo '<td>';
-                                echo '<div class="product-wrapper">';
-                                echo '<div class="product">';
-                                echo '<h2 class="product-name">'.$product['BestemmingsStad'].'</h2>';
-                                echo '<p class="product-oms">'.$product['Beschrijving'].'</p>';
-                                echo '<p class="product-price">Prijs: €'.$product['Prijs'].'</p>';
-                                echo '<p class="product-cat">Categorie: '.$product['Categorie'].'</p>';
-                                echo '<form class="product-form" action="bestel.php" method="POST">';
-                                echo '<input type="hidden" name="product_id" value="'.$product['id'].'">';
-                                echo '<input type="submit" value="update" class="add-to-cart-btn">';
-                                echo '</form>';
-                                echo '</div>';
-                                echo '</div>';
-                                echo '</td>';
-                                echo '</tr>';
-                            }
-                        ?>
+                     
+                        <?php include ('vakantie.php'); ?>
+                   
                     </tbody>
                 </table>
             </div>
         </div>
 
-        <!-- De overige secties voor bijwerken en verwijderen van producten worden hier geplaatst -->
+        <div id="updatebak" class="content-section">
+            <div class="contact-bak">
+                <h2>Update Product</h2>
+                <form id="updateForm">
+                    <div class="veldje">
+                        <label for="productId">Product ID</label>
+                        <input type="text" id="productId" placeholder="Product ID" required>
+                    </div>
+                    <div class="veldje">
+                        <label for="newProductName">New Product Name</label>
+                        <input type="text" id="newProductName" placeholder="New Product Name">
+                    </div>
+                    <div class="veldje">
+                        <label for="newPrice">New Price</label>
+                        <input type="number" id="newPrice" placeholder="New Price">
+                    </div>
+                    <div class="veldje">
+                        <label for="newDescription">New Description</label>
+                        <textarea id="newDescription" placeholder="New Description"></textarea>
+                    </div>
+                    <button type="submit" class="knoppie">Update</button>
+                </form>
+                <p><a href="#" id="createLink">Switch to Create Product</a> | <a href="#" id="deleteLink">Switch to Delete Product</a></p>
 
+                <table class="product-table">
+                    <tbody>
+                        <?php include ('vakantie.php'); ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="deletebak" class="content-section">
+            <div class="contact-bak">
+                <h2>Delete Product</h2>
+                <form id="deleteForm">
+                    <div class="veldje">
+                        <label for="deleteProductId">Product ID</label>
+                        <input type="text" id="deleteProductId" placeholder="Product ID" required>
+                    </div>
+                    <button type="submit" class="knoppie">Delete</button>
+                </form>
+                <p><a href="#" id="createLink">Switch to Create Product</a> | <a href="#" id="updateLink">Switch to Update Product</a></p>
+                <table class="product-table">
+                    <tbody>
+                        <?php include ('vakantie.php'); ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </main>
 
     <script src="assets/javascript.js/admin.js"></script>
