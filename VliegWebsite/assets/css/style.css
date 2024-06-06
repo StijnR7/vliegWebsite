@@ -116,7 +116,7 @@ button {
 }
 
 .mySlides {
-    display: none;
+   
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -393,4 +393,89 @@ background-color: aquamarine;
 }
 .section-form.active{
     display: block;
+}
+.mySlides{
+    background-image: url('../img/slideshow1.jpeg');
+    background-image: url('assets/img/slideshow2.png');
+    background-image: url('assets/img/slideshow3.jpeg');
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 60vw;
+    margin-top: 30vh;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+}
+
+.contact-veld {
+    margin-bottom: 15px;
+}
+
+.contact-veld label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.contact-veld input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    max-width: 100%;
+}
+
+.contact-veld textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    max-width: 100%;
+    min-height: 20vw;
+}
+
+.blue-lines {
+    width: 100%;
+    max-width: 70vw;
+}
+
+.blue-line {
+    position: relative;
+    margin-top: 6vw;
+}
+
+.blue-line span {
+    display: inline-block;
+    background-color: #f4f4f9;
+    padding: 0 10px;
+    font-size: 16px;
+    color: #007bff;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.blue-line::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #00c3ff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
 }
