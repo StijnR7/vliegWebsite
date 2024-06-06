@@ -10,10 +10,10 @@
     <?php include ('header.php'); ?>
     <div class="contact-form">
         <h2>Contacteer Ons</h2>
-        <form>
+        <form action="contactPHP.php" method="POST">
             <div class="contact-veld">
                 <label for="naam">Naam</label>
-                <input type="text" id="naam" name="naam" required>
+                <input type="text" id="naam" name="user" required>
             </div>
             <div class="contact-veld">
                 <label for="email">Email</label>
