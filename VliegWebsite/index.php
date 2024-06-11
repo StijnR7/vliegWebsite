@@ -31,7 +31,7 @@
                     <input name="bestemming" type="text" placeholder="Bestemming">
                     <input name="verDatum" type="date" placeholder="Vertrek datum">
                     <button type="submit">Zoek</button>
-                </form>
+                </for       m>
             </div>
          
             </div>

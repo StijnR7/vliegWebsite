@@ -10,13 +10,7 @@
 <body>
 <?php include ('header.php'); ?>
 <div class="formvliegut">
-                <form id="rijtje">
-                    <input type="text" placeholder="Vertrekpunt">
-                    <input type="text" placeholder="Bestemming">
-                    <input type="date" placeholder="Vertrek datum">
-                    <input type="date" placeholder="Aankomst">
-                    <button type="submit">Zoek</button>
-                </form>
+               
             </div>
             <div class="product-container">
                 <table class="product-table">

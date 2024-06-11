@@ -36,6 +36,9 @@ elseif ($key1 == 'Prijs'){
 elseif ($key1 == 'vluchtID'){
   $vluchtID = $value1;
 }
+elseif ($key1 == 'vertrekDatum'){
+    $vertrekDatum = $value1;
+  }
 
 }
 
@@ -46,6 +49,9 @@ echo '<td>
 <p class="product-price">Prijs: €'. $Prijs .'</p>
 <form class="product-form" action="boekreis.php" method="POST">
 <input type="hidden" name="product_id" value="'. $vluchtID . '">
+<input type="hidden" name="prijs" value="'. $Prijs . '">
+<input type="hidden" name="vertrekDat" value="'. $vertrekDatum . '">
+
 <input type="submit" value="Boek" class="add-to-cart-btn">
 </form>
 </div>
