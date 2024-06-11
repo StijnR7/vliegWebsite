@@ -31,10 +31,21 @@
                     <input name="bestemming" type="text" placeholder="Bestemming">
                     <input name="verDatum" type="date" placeholder="Vertrek datum">
                     <button type="submit">Zoek</button>
-                </for       m>
+                </for>
             </div>
-         
+            <div class="sale-box">
+                <h1>Sale</h1>
+             </div>
+            <section class="sale-vlucht">
+        <div class="sale-container">
+            <div class="sale-left">
+                <div class="sale-vlucht1"></div>
+                <div class="sale-vlucht2"></div>
             </div>
+            <div class="sale-right">
+                <div class="sale-vlucht3"></div>
+            </div>
+            </section>
     </main> 
     <script src="assets/javascript/java.js"></script>
 </body>
