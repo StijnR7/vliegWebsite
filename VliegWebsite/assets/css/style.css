@@ -478,6 +478,7 @@ background-color: aquamarine;
     bottom: 0;
     left: 0;
     z-index: 0;
+<<<<<<< Updated upstream
 }
 
 
@@ -544,4 +545,6 @@ tbody tr:nth-child(even) {
 
 tbody tr:hover {
     background-color: #ddd;
+=======
+>>>>>>> Stashed changes
 }
