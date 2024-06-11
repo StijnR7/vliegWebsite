@@ -10,17 +10,13 @@
     <?php include('header.php'); ?>
     <main>
         <div class="slideshow-container">
-<<<<<<< Updated upstream
+
 
             <div class="mySlides fade" style="background-image: url('../vliegWebsite/VliegWebsite/assets/img/Screenshot\ 2024-05-23\ 135248.png');"></div>
             <div class="mySlides fade" style="background-image: url('../vliegWebsite/VliegWebsite/assets/img/Screenshot\ 2024-05-23\ 135248.png');"></div>
             <div class="mySlides fade" style="background-image: url('../vliegWebsite/VliegWebsite/assets/img/images\ \(1\).jpeg');"></div> 
 
-=======
-            <div class="mySlides fade"></div>
-            <div class="mySlides fade" ></div>
-            <div class="mySlides fade"></div> 
->>>>>>> Stashed changes
+
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div> 
@@ -30,16 +26,26 @@
                 <p>CTV vakantie planner is jouw sleutel tot perfecte vakanties</p>
             </div>
             <div class="formvliegut">
-                <form id="rijtje">
-                    <input type="text" placeholder="Vertrekpunt">
-                    <input type="text" placeholder="Bestemming">
-                    <input type="date" placeholder="Vertrek datum">
-                    <input type="date" placeholder="Aankomst">
+                <form id="rijtje" action="zoekreisPHP.php" method="GET" >
+                    <input name="vertrek" type="text" placeholder="Vertrekpunt">
+                    <input name="bestemming" type="text" placeholder="Bestemming">
+                    <input name="verDatum" type="date" placeholder="Vertrek datum">
                     <button type="submit">Zoek</button>
-                </form>
+                </for>
             </div>
-         
+            <div class="sale-box">
+                <h1>Sale</h1>
+             </div>
+            <section class="sale-vlucht">
+        <div class="sale-container">
+            <div class="sale-left">
+                <div class="sale-vlucht1"></div>
+                <div class="sale-vlucht2"></div>
             </div>
+            <div class="sale-right">
+                <div class="sale-vlucht3"></div>
+            </div>
+            </section>
     </main> 
     <script src="assets/javascript/java.js"></script>
 </body>

@@ -139,8 +139,139 @@ button {
 button:hover {
     background-color: darkblue;
 }
+.sale-box{
+    width: 60px;
+    height: 20px;
+    background-color: red;
+    color: rgb(0, 0, 0);
+}
+.sale-vlucht {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.sale-container {
+    display: flex;
+    width: 80%;
+    height: 80%;
+}
+
+.sale-left, .sale-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.sale-left {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.sale-vlucht1, .sale-vlucht2 {
+    flex: 1;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #000000;
+}
+
+.sale-vlucht2 {
+    margin-bottom: 0;
+}
+
+.sale-right {
+    flex: 1;
+}
+
+.sale-vlucht3 {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #000000; 
+}
 
 
+.sale-vlucht1 {
+    background-image: url('');
+}
+
+.sale-vlucht2 {
+    background-image: url('');
+}
+
+.sale-vlucht3 {
+    background-image: url('');
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 70vw;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form input[type="submit"] {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: aqua;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
 p {
     padding: 10px 0;
 }
