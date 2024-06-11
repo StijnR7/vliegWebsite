@@ -10,11 +10,17 @@
     <?php include('header.php'); ?>
     <main>
         <div class="slideshow-container">
+<<<<<<< Updated upstream
 
             <div class="mySlides fade" style="background-image: url('../vliegWebsite/VliegWebsite/assets/img/Screenshot\ 2024-05-23\ 135248.png');"></div>
             <div class="mySlides fade" style="background-image: url('../vliegWebsite/VliegWebsite/assets/img/Screenshot\ 2024-05-23\ 135248.png');"></div>
             <div class="mySlides fade" style="background-image: url('../vliegWebsite/VliegWebsite/assets/img/images\ \(1\).jpeg');"></div> 
 
+=======
+            <div class="mySlides fade"></div>
+            <div class="mySlides fade" ></div>
+            <div class="mySlides fade"></div> 
+>>>>>>> Stashed changes
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div> 
@@ -33,7 +39,7 @@
             </div>
          
             </div>
-    </main>
+    </main> 
     <script src="assets/javascript/java.js"></script>
 </body>
 </html>
