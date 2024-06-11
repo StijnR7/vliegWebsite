@@ -10,11 +10,7 @@
     <?php include ('header.php'); ?>
     <div class="contact-form">
         <h2>Contacteer Ons</h2>
-<<<<<<< Updated upstream
         <form action="contactPHP.php" method="POST">
-=======
-        <form>
->>>>>>> Stashed changes
             <div class="contact-veld">
                 <label for="naam">Naam</label>
                 <input type="text" id="naam" name="user" required>
