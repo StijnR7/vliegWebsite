@@ -24,11 +24,10 @@
                 <p>CTV vakantie planner is jouw sleutel tot perfecte vakanties</p>
             </div>
             <div class="formvliegut">
-                <form id="rijtje">
-                    <input type="text" placeholder="Vertrekpunt">
-                    <input type="text" placeholder="Bestemming">
-                    <input type="date" placeholder="Vertrek datum">
-                    <input type="date" placeholder="Aankomst">
+                <form id="rijtje" action="zoekreisPHP.php" method="GET" >
+                    <input name="vertrek" type="text" placeholder="Vertrekpunt">
+                    <input name="bestemming" type="text" placeholder="Bestemming">
+                    <input name="verDatum" type="date" placeholder="Vertrek datum">
                     <button type="submit">Zoek</button>
                 </form>
             </div>
