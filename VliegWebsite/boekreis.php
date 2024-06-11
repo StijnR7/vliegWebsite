@@ -19,7 +19,7 @@
 
    // Execute the statement
    $stmt->execute();
-   header('Location: boek.php');
+   header('Location: index.php');
 }
     else{
         header('Location: inlog.php');
