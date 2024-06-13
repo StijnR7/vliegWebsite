@@ -88,9 +88,14 @@ nav {
     display: block;
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
+input[type="text"], 
+input[type="email"], 
+input[type="password"]
+input[type="number"],
+input[type="date"]
+input[type="submit"]{
     width: 100%;
-    padding: 10px;
+    padding: 40px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -116,11 +121,14 @@ button {
 }
 
 .mySlides {
-   
     width: 100vw;
     height: 100vh;
     background-size: cover;
     background-position: center;
+    background-image: url('../vliegWebsite/VliegWebsite/assets/img/slideshow1.png');
+    background-image: url('../vliegWebsite/VliegWebsite/assets/img/slideshow2.png');
+    background-image: url('../vliegWebsite/VliegWebsite/assets/img/slideshow3.jpeg');
+
 }
 
 .fade {
@@ -139,18 +147,23 @@ button {
 button:hover {
     background-color: darkblue;
 }
-.sale-box{
-    width: 60px;
-    height: 20px;
-    background-color: red;
-    color: rgb(0, 0, 0);
+.sale-widht{
+display: flex;
+justify-content: center;
 }
+.sale-box{
+    width: 80px;
+    height: 40px;
+    background-color: red;
+    color: rgb(255, 255, 255);
+}
+
 .sale-vlucht {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 80vw;
+    height: 800px;
 }
 
 .sale-container {
@@ -166,15 +179,25 @@ button:hover {
 
 .sale-left {
     flex: 1;
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
-.sale-vlucht1, .sale-vlucht2 {
-    flex: 1;
-    margin-bottom: 20px;
+.sale-vlucht1, .sale-vlucht2{
+    position: relative;
+    height: 400px;
+    margin-bottom: 40px;
     background-size: cover;
     background-position: center;
     border: 2px solid #000000;
+    border-radius: 5px;
+}
+.sale-vlucht3{
+    position: relative;
+    height: 840px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #000000;
+    border-radius: 5px;
 }
 
 .sale-vlucht2 {
@@ -185,48 +208,70 @@ button:hover {
     flex: 1;
 }
 
-.sale-vlucht3 {
-    flex: 1;
-    background-size: cover;
-    background-position: center;
-    border: 2px solid #000000; 
-}
-
-
 .sale-vlucht1 {
-    background-image: url('');
+    background-image: url('image1.jpg');
 }
 
 .sale-vlucht2 {
-    background-image: url('');
+    background-image: url('image2.jpg');
 }
 
 .sale-vlucht3 {
-    background-image: url('');
+    background-image: url('image3.jpg');
 }
-form {
+
+.vlucht4-mid {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    max-width: 70vw;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.sale-vlucht4 {
+    position: relative;
+    background-image: url('image4.jpg');
+    width: 64vw;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.rood-doos {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.naam-vlucht {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
 
 form label {
     display: block;
-    margin-bottom: 10px;
 }
 
 form input[type="text"],
 form input[type="number"],
+input[type="password"],
+input[type="email"],
 form input[type="date"],
 form input[type="submit"] {
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -330,14 +375,45 @@ a:hover {
     background-color: rgb(171, 252, 252);
     opacity: 5;
 }
+.formvliegut{
+    background-color: #00c3ff;
+    border-radius: 10px;
+}
 .formvliegut form {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.formvliegut input, .formvliegut button {
+.formvliegut input,
+.formvliegut button {
     margin: 0 5px;
+    width: calc(33.3% - 10px); 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
+
+.formvliegut input[type="date"] {
+    width: calc(33.3% - 12px); 
+}
+
+.formvliegut button {
+    width: calc(33.3% - 10px); 
+    background-color: rgb(40, 187, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formvliegut button:hover {
+    background-color: #0056b3;
+}
+
 
 .vakantie-deals {
     width: 100%;
@@ -393,15 +469,7 @@ a:hover {
     border-radius: 10px;
 }
 
-.sale {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: red;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
+
 
 .vakantie-deals {
     display: flex;
@@ -612,7 +680,7 @@ background-color: aquamarine;
 }
 
 
-form {
+.for-vervang {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
@@ -623,13 +691,11 @@ form {
 
 form label {
     display: block;
-    margin-bottom: 10px;
 }
 
 form input[type="text"],
 form input[type="number"],
-form input[type="date"],
-form input[type="submit"] {
+form input[type="date"]{
     width: calc(100% - 22px);
     padding: 10px;
     margin-bottom: 20px;
@@ -638,16 +704,27 @@ form input[type="submit"] {
     font-size: 16px;
 }
 
-form input[type="submit"] {
-    background-color: #007bff;
-    color: white;
+#registerform input[type="text"],
+#registerform input[type="email"],
+#registerform input[type="password"] {
+    width: calc(100% - 22px); 
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#registerform button[type="submit"] {
+    width: 100%; 
+    padding: 10px;
     border: none;
+    background-color: rgb(40, 187, 255);
+    color: white;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-form input[type="submit"]:hover {
-    background-color: #0056b3;
-}
 
 table {
     width: 100%;

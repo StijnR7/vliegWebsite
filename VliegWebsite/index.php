@@ -26,26 +26,58 @@
                 <p>CTV vakantie planner is jouw sleutel tot perfecte vakanties</p>
             </div>
             <div class="formvliegut">
-                <form id="rijtje" action="zoekreisPHP.php" method="GET" >
-                    <input name="vertrek" type="text" placeholder="Vertrekpunt">
-                    <input name="bestemming" type="text" placeholder="Bestemming">
-                    <input name="verDatum" type="date" placeholder="Vertrek datum">
-                    <button type="submit">Zoek</button>
-                </for>
-            </div>
+            <form id="rijtje" action="zoekreisPHP.php" method="GET">
+                <input name="vertrek" type="text" placeholder="Vertrekpunt">
+                <input name="bestemming" type="text" placeholder="Bestemming">
+                <input name="verDatum" type="date" placeholder="Vertrek datum">
+                <button type="submit">Zoek</button>
+            </form>
+        </div>
+            <br><br><br>
+            <br><br><br>
+            <section id="sale-widht">
             <div class="sale-box">
-                <h1>Sale</h1>
+                <h2>Sale</h2>
              </div>
+            </id>
+             <br><br><br>
+            <br><br><br>
             <section class="sale-vlucht">
-        <div class="sale-container">
-            <div class="sale-left">
-                <div class="sale-vlucht1"></div>
-                <div class="sale-vlucht2"></div>
+    <div class="sale-container">
+        <div class="sale-left">
+            <div class="sale-vlucht1">
+                <div class="rood-doos">€100</div>
+                <div class="naam-vlucht">
+                    <span>Amsterdam, Netherlands</span>
+                </div>
             </div>
-            <div class="sale-right">
-                <div class="sale-vlucht3"></div>
+            <div class="sale-vlucht2">
+                <div class="rood-doos">€200</div>
+                <div class="naam-vlucht">
+                    <span>Paris, France</span>
+                </div>
             </div>
-            </section>
+        </div>
+        <div class="sale-right">
+            <div class="sale-vlucht3">
+                <div class="rood-doos">€150</div>
+                <div class="naam-vlucht">
+                    <span>Berlin, Germany</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<div class="vlucht4-mid">
+    <div class="sale-vlucht4">
+        <div class="rood-doos">€250</div>
+        <div class="naam-vlucht">
+            <span>Rome, Italy</span>
+        </div>
+    </div>
+</div>
+
     </main> 
     <script src="assets/javascript/java.js"></script>
 </body>

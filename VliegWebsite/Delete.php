@@ -9,14 +9,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete'])) {
 
     try {
    
-        $sql = "DELETE FROM orderinfo WHERE vluchtID = :vluchtID";
+        $sql = "DELETE FROM orderinfo WHERE vluchtID";
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':vluchtID', $vluchtID, PDO::PARAM_INT);
+        $stmt->bindParam(':vluchtID', $vluchtID);
         $stmt->execute();
 
-        $sql = "DELETE FROM vlucht WHERE vluchtID = :vluchtID";
+        $sql = "DELETE FROM vlucht WHERE vluchtID";
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':vluchtID', $vluchtID, PDO::PARAM_INT);
+        $stmt->bindParam(':vluchtID', $vluchtID);
 
         if ($stmt->execute()) {
           
@@ -29,7 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete'])) {
         }
     } catch (PDOException $e) {
        
-        $conn->rollBack();
         echo "Error: " . $e->getMessage();
     }
 }

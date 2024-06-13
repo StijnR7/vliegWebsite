@@ -10,6 +10,7 @@
     <?php include ('header.php'); ?>
     <div class="contact-form">
         <h2>Contacteer Ons</h2>
+        <div class="for-vervang">
         <form action="contactPHP.php" method="POST">
             <div class="contact-veld">
                 <label for="naam">Naam</label>
@@ -29,6 +30,7 @@
             </div>
             <button type="submit" class="knoppie">Verstuur</button>
         </form>
+        </div>
     </div>
     <div class="blue-lines">
         <div class="blue-line">0612345678</div>
