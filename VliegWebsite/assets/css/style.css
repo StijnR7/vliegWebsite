@@ -9,6 +9,7 @@ body {
     flex-direction: column;
     align-items: center;
     height: 8000px;
+    margin: 0;
 }
 header {
     display: flex;
@@ -44,15 +45,15 @@ nav {
     display: flex;
     flex: 2;
     justify-content: center;
-    gap: 1.5vw;
+    gap: 7vw;
 }
 
 .bar h1 a {
     text-decoration: none;
     color: white;
-    background-color: blue;
+    background-color: rgb(57, 222, 255);
     padding: 8px 15px;
-    border-radius: 5px;
+    border-radius: 25px;
     font-size: 0.9em; 
 }
 
@@ -90,6 +91,7 @@ nav {
 input[type="text"], input[type="email"], input[type="password"] {
     width: 100%;
     padding: 10px;
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -114,7 +116,7 @@ button {
 }
 
 .mySlides {
-    display: none;
+   
     width: 100vw;
     height: 100vh;
     background-size: cover;
@@ -138,7 +140,7 @@ button:hover {
     background-color: darkblue;
 }
 
-/* wat de kanker bro */
+
 p {
     padding: 10px 0;
 }
@@ -189,16 +191,21 @@ a:hover {
 }
 
 .mooitekst {
-    padding-bottom: 30px;
-}
+    margin-bottom: 60px;
 
+}
+.mooitekst p{
+    border-radius: 5px;
+    background-color: rgb(171, 252, 252);
+    opacity: 5;
+}
 .formvliegut form {
     display: flex;
     justify-content: center;
 }
 
 .formvliegut input, .formvliegut button {
-    padding: 0 5px;
+    margin: 0 5px;
 }
 
 .vakantie-deals {
@@ -222,6 +229,7 @@ a:hover {
 .block {
     flex: 1 1 100%;
     max-width: 100%;
+    margin: 10px;
     position: relative;
     height: 200px;
 }
@@ -268,7 +276,7 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 50px;
+    margin-top: 50px;
 }
 
 .red-block {
@@ -281,7 +289,7 @@ a:hover {
 
 .sale-block {
     position: relative;
-    padding: 20px;
+    margin: 20px;
 }
 
 .sale-block img {
@@ -311,8 +319,9 @@ a:hover {
 }
 
 .product-table {
+    
     width: 100%;
-    padding-top: 50px;
+    margin: 50px auto 0;
     border-spacing: 20px;
 }
 
@@ -327,7 +336,7 @@ a:hover {
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding-top: 50px;
+    margin-top: 50px;
 }
 
 .product-name {
@@ -337,12 +346,12 @@ a:hover {
 .product-oms,
 .product-price,
 .product-cat {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .product-form {
-    padding-top: 10px;
+    margin-top: 10px;
 }
 
 .add-to-cart-btn {
@@ -367,76 +376,202 @@ a:hover {
 .content-section.active {
     display: block;
 }
-.contact-bak {
-    width: 100%;
-    max-width: 600px;
-    background: white;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    animation: vervagen 1s ease-in-out;
-}
+.rijtje{
+background-color: aquamarine;
 
-@keyframes vervagen {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
 }
-
-.contact-bak h2 {
-    text-align: center;
-    padding-bottom: 20px;
-    font-size: 2em;
-    color: #333;
+.section-form{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
 }
-
-.veldje {
-    padding-bottom: 20px;
+.veldje{
+    padding: 5px;
 }
-
-.veldje label {
+.section-form{
+    display: none;
+}
+.section-form.active{
     display: block;
-    padding-bottom: 5px;
+}
+.mySlides{
+    background-image: url('../img/slideshow1.jpeg');
+    background-image: url('assets/img/slideshow2.png');
+    background-image: url('assets/img/slideshow3.jpeg');
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 60vw;
+    margin-top: 30vh;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+}
+
+.contact-veld {
+    margin-bottom: 15px;
+}
+
+.contact-veld label {
+    display: block;
+    margin-bottom: 5px;
     font-weight: bold;
     color: #555;
 }
 
-.veldje input, .veldje textarea {
+.contact-veld input{
     width: 100%;
-    padding: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    max-width: 100%;
+}
+
+.contact-veld textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    max-width: 100%;
+    min-height: 20vw;
+}
+
+.blue-lines {
+    width: 100%;
+    max-width: 70vw;
+}
+
+.blue-line {
+    position: relative;
+    margin-top: 6vw;
+}
+
+.blue-line span {
+    display: inline-block;
+    background-color: #f4f4f9;
+    padding: 0 10px;
+    font-size: 16px;
+    color: #007bff;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.blue-line::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #00c3ff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form input[type="submit"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1em;
-    transition: border-color 0.3s;
+    font-size: 16px;
 }
 
-.veldje input:focus, .veldje textarea:focus {
-    border-color: #40b3ff;
-    outline: none;
-}
-
-.veldje textarea {
-    resize: vertical;
-    height: 150px;
-}
-
-.knoppie {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    background-color: #40b3ff;
+form input[type="submit"] {
+    background-color: #007bff;
     color: white;
-    border-radius: 5px;
+    border: none;
     cursor: pointer;
-    font-size: 1.2em;
-    transition: background-color 0.3s, transform 0.3s;
 }
 
-.knoppie:hover {
-    background-color: #0099ff;
-    transform: translateY(-2px);
+form input[type="submit"]:hover {
+    background-color: #0056b3;
 }
 
-.knoppie:active {
-    background-color: #007acc;
-    transform: translateY(0);
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: aqua;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+#overOnsContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: #46FFFF;
+    width: 100%;
+    height: 60%;
+    border-radius: 15px;
+    opacity: 50%;
+
+
+}
+#overOnsSection{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 80vw;
+    height: 750px;
+
+
+}
+#aboutUsTitel{
+    font-size: 30px;
+
+
 }
