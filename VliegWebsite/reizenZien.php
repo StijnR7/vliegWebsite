@@ -42,12 +42,15 @@ elseif ($key1 == 'vertrekDatum'){
   elseif ($key1 == 'foto'){
     $foto = $value1;
   }
-
+  elseif ($key1 == 'foto'){
+    $foto = $value1;
+  }
+  
 }
 
 echo '<td>
 <div class="reis">
-    <img src="" alt="Reis Foto" class="reis-foto">
+    <img src="' . $foto .  '" alt="Reis Foto" class="reis-foto">
     <div class="reis-details">
         <h2 class="reis-naam">'. $bestemmingsStad .', '. $bestemmingsLand .'</h2>
         <p class="reis-vertrek">Vertrek: '. $vertrekDatum .'</p>

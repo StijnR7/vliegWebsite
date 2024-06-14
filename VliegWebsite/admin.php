@@ -32,6 +32,8 @@ include('createvlucht.php');
     <input type="date" id="vertrekDatum" name="vertrekDatum">
     <label for="Prijs">Prijs</label>
     <input type="number" id="Prijs" name="Prijs">
+    <label for="Prijs">Foto</label>
+    <input type="text" id="Foto" name="Foto">
     <input type="submit" name="register" value="Voeg toe">
 </section>
 </form><br><br>
