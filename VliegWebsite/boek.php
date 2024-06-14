@@ -8,8 +8,7 @@
 </head>
 <body>
     <?php include('header.php'); ?>
-    <br><br><br>
-    <br><br><br>
+   
     <div class="formvliegut"></div>
     <div class="product-container">
         <table class="product-table">

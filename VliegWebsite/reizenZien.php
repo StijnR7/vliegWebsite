@@ -15,38 +15,16 @@ echo "Geen resultaten.";
 
 }   
 else{
-foreach($result AS $key => $value){
-foreach($value AS $key1 => $value1){
+  foreach($result as $key => $value) {
+    $bestemmingsLand = $value['bestemmingsLand'] ?? null;
+    $bestemmingsStad = $value['bestemmingsStad'] ?? null;
+    $vertrekLand = $value['vertrekLand'] ?? null;
+    $vertrekStad = $value['vertrekStad'] ?? null;
+    $Prijs = $value['Prijs'] ?? null;
+    $vluchtID = $value['vluchtID'] ?? null;
+    $vertrekDatum = $value['vertrekDatum'] ?? null;
+    $foto = $value['foto'] ?? null;
 
-if ($key1 == 'bestemmingsLand'){
-  $bestemmingsLand = $value1;
-}
-elseif ($key1 == 'bestemmingsStad'){
-  $bestemmingsStad = $value1;
-}
-elseif ($key1 == 'vertrekLand'){
-  $vertrekLand = $value1;
-}
-elseif ($key1 == 'vertrekStad'){
-  $vertrekStad = $value1;
-}
-elseif ($key1 == 'Prijs'){
-  $Prijs = $value1;
-}
-elseif ($key1 == 'vluchtID'){
-  $vluchtID = $value1;
-}
-elseif ($key1 == 'vertrekDatum'){
-    $vertrekDatum = $value1;
-  }
-  elseif ($key1 == 'foto'){
-    $foto = $value1;
-  }
-  elseif ($key1 == 'foto'){
-    $foto = $value1;
-  }
-  
-}
 
 echo '<td>
 <div class="reis">
