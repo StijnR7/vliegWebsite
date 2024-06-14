@@ -39,6 +39,9 @@ elseif ($key1 == 'vluchtID'){
 elseif ($key1 == 'vertrekDatum'){
     $vertrekDatum = $value1;
   }
+  elseif ($key1 == 'foto'){
+    $foto = $value1;
+  }
 
 }
 
@@ -54,6 +57,7 @@ echo '<td>
 
 <input type="submit" value="Boek" class="add-to-cart-btn">
 </form>
+<img src="'. $foto .'" alt="">
 </div>
 </div>
 </td>'; 
