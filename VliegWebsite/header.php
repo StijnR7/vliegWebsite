@@ -13,7 +13,7 @@
             <div class="bar">
 
                 <h1><a href="index.php  ">Home</a></h1>
-                <h1><a href="admin.php">Over ons</a></h1>
+                <h1><a href="overOns.php">Over ons</a></h1>
                 <h1><a href="boek.php">Reizen</a></h1>
                 <h1><a href="Contact.php">Contact</a></h1>
 

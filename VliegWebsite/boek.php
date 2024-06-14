@@ -13,12 +13,10 @@
                
             </div>
             <div class="product-container">
-                <table class="product-table">
-                    <tr>
-                        <?php
+            <?php
                            include('reizenZien.php');
                             ?>
-                    </tr>
+                
                 </table>
             </div>
         </div>

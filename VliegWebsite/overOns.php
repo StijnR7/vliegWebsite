@@ -9,33 +9,15 @@
 <body>
     <?php include('header.php'); ?>
     <main>
-        <div class="slideshow-container">
+      <section id="overOnsSection">
+        <div id="overOnsContainer">
+            <h1 id="aboutUsTitel">About us</h1> 
+            <h3>Wij zijn heel cool en gangster en hele leipe shit</h3>
 
+        </div>
 
-            <div class="mySlides fade" style="background-image: url('../vliegWebsite/VliegWebsite/assets/img/Screenshot\ 2024-05-23\ 135248.png');"></div>
-            <div class="mySlides fade" style="background-image: url('../vliegWebsite/VliegWebsite/assets/img/Screenshot\ 2024-05-23\ 135248.png');"></div>
-            <div class="mySlides fade" style="background-image: url('../vliegWebsite/VliegWebsite/assets/img/images\ \(1\).jpeg');"></div> 
-
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div> 
-      
-        <div class="overlay">
-            <div class="mooitekst">
-                <p>CTV vakantie planner is jouw sleutel tot perfecte vakanties</p>
-            </div>
-            <div class="formvliegut">
-                <form id="rijtje" action="zoekreisPHP.php" method="GET" >
-                    <input name="vertrek" type="text" placeholder="Vertrekpunt">
-                    <input name="bestemming" type="text" placeholder="Bestemming">
-                    <input name="verDatum" type="date" placeholder="Vertrek datum">
-                    <button type="submit">Zoek</button>
-                </for       m>
-            </div>
-         
-            </div>
+      </section>
     </main> 
-    <script src="assets/javascript/java.js"></script>
+    
 </body>
 </html>
