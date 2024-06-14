@@ -5,13 +5,9 @@ include('connection.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete'])) {
 
-    $vluchtID = $_POST['id']; 
-
-    $pdo = "DELETE FROM vlucht WHERE id=?";
-
+    $sql = "DELETE FROM vlucht WHERE vluchtID = :vluchtID";
     $stmt = $conn->prepare($pdo);
-
-    $stmt->bindParam(1, $vluchtID);
+    $stmt->bindParam(':vluchtID', $vluchtID);
 
     if ($stmt->execute()) {
         echo "Product verwijderd succesvol";
