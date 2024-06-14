@@ -15,8 +15,9 @@ include('createvlucht.php');
 <br><br><br>
 <br><br><br>
 <br><br><br>
-<h2>create product</h2>
-<form action="vluchtCreate.php" method="post">
+<h2>Create product</h2>
+<section class="for-vervang">
+<form action="createvlucht.php" method="post">
     <label for="bestemmingsStad">bestemmingsStad:</label>
     <input type="text" id="bestemmingsStad" name="bestemmingsStad">
     <label for="vertrekStad">vertrekStad:</label>
@@ -32,6 +33,7 @@ include('createvlucht.php');
     <label for="Prijs">Prijs</label>
     <input type="number" id="Prijs" name="Prijs">
     <input type="submit" name="register" value="Voeg toe">
+</section>
 </form><br><br>
 
 <h2>Vlucht Beheer</h2>
@@ -57,18 +59,18 @@ include('createvlucht.php');
         foreach ($vluchten as $vlucht): ?>
             <tr>
                 <form action="update.php" method="post">
-                    <td><input type="text" name="vluchtID" value="<?php echo htmlspecialchars($vlucht['vluchtID']); ?>"></td>
-                    <td><input type="text" name="bestemmingsStad" value="<?php echo htmlspecialchars($vlucht['bestemmingsStad']); ?>"></td>
-                    <td><input type="text" name="vertrekStad" value="<?php echo htmlspecialchars($vlucht['vertrekStad']); ?>"></td>
-                    <td><input type="text" name="bestemmingsLand" value="<?php echo htmlspecialchars($vlucht['bestemmingsLand']); ?>"></td>
-                    <td><input type="text" name="vertrekLand" value="<?php echo htmlspecialchars($vlucht['vertrekLand']); ?>"></td>
-                    <td><input type="number" name="reistijd" value="<?php echo htmlspecialchars($vlucht['reistijd']); ?>"></td>
-                    <td><input type="date" name="vertrekDatum" value="<?php echo htmlspecialchars($vlucht['vertrekDatum']); ?>"></td>
-                    <td><input type="number" name="Prijs" value="<?php echo htmlspecialchars($vlucht['Prijs']); ?>"></td>
+                    <td><input type="text" name="vluchtID" value="<?php echo ($vlucht['vluchtID']); ?>"></td>
+                    <td><input type="text" name="bestemmingsStad" value="<?php echo ($vlucht['bestemmingsStad']); ?>"></td>
+                    <td><input type="text" name="vertrekStad" value="<?php echo ($vlucht['vertrekStad']); ?>"></td>
+                    <td><input type="text" name="bestemmingsLand" value="<?php echo ($vlucht['bestemmingsLand']); ?>"></td>
+                    <td><input type="text" name="vertrekLand" value="<?php echo ($vlucht['vertrekLand']); ?>"></td>
+                    <td><input type="number" name="reistijd" value="<?php echo ($vlucht['reistijd']); ?>"></td>
+                    <td><input type="date" name="vertrekDatum" value="<?php echo ($vlucht['vertrekDatum']); ?>"></td>
+                    <td><input type="number" name="Prijs" value="<?php echo ($vlucht['Prijs']); ?>"></td>
                     <td><input type="submit" name="Update" value="update"></td>
                 </form>
                 <form action="Delete.php" method="post">
-                    <input type="hidden" name="vluchtID" value="<?php echo htmlspecialchars($vlucht['vluchtID']); ?>">
+                    <input type="hidden" name="vluchtID" value="<?php echo ($vlucht['vluchtID']); ?>">
                     <td><input type="submit" name="Delete" value="Delete"></td>
                 </form>
             </tr>

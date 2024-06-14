@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,18 +7,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<?php include ('header.php'); ?>
-<div class="formvliegut">
-               
-            </div>
-            <div class="product-container">
-            <?php
-                           include('reizenZien.php');
-                            ?>
-                
-                </table>
-            </div>
-        </div>
+    <?php include('header.php'); ?>
+    <br><br><br>
+    <br><br><br>
+    <div class="formvliegut"></div>
+    <div class="product-container">
+        <table class="product-table">
+            <?php include('reizenZien.php'); ?>
+        </table>
+    </div>
 </body>
 </html>
-
