@@ -2,29 +2,34 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, sans-serif;
     background: #f4f4f4;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 8000px;
+    width: 100vw;
+    min-height: 100vh;
     margin: 0;
 }
+
 header {
     display: flex;
     justify-content: center;
     position: fixed;
+    max-height: 100px;
     top: 20px;
     left: 10px;
     right: 10px;
     width: calc(100% - 20px);
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(255, 255, 255, 0.9);
     border-radius: 15px;
     z-index: 1000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
     padding: 10px 20px;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -36,14 +41,12 @@ nav {
     flex: 1;
 }
 
-.logo h1 a {
-    text-decoration: none;
-    color: black;
+.logo img {
+    scale: 60%;
 }
 
 .bar {
     display: flex;
-    flex: 2;
     justify-content: center;
     gap: 7vw;
 }
@@ -54,7 +57,7 @@ nav {
     background-color: rgb(57, 222, 255);
     padding: 8px 15px;
     border-radius: 25px;
-    font-size: 0.9em; 
+    font-size: 0.9em;
 }
 
 .login {
@@ -63,9 +66,8 @@ nav {
     justify-content: flex-end;
 }
 
-.login h1 a {
-    text-decoration: none;
-    color: black;
+.login img {
+    scale: 15%;
 }
 
 .loginlijn {
@@ -74,10 +76,10 @@ nav {
     max-width: 400px;
     padding: 20px;
     background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;
-    margin-top: 250px; 
+    margin-top: 250px;
 }
 
 .section {
@@ -88,16 +90,48 @@ nav {
     display: block;
 }
 
-input[type="text"], 
-input[type="email"], 
-input[type="password"]
+.slideshow-container {
+    width: 100vw;
+    height: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.mySlides {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../vliegWebsite/VliegWebsite/assets/img/slideshow1.png");
+    background-image: url("../vliegWebsite/VliegWebsite/assets/img/slideshow2.png");
+    background-image: url("../vliegWebsite/VliegWebsite/assets/img/slideshow3.jpeg");
+}
+
+.fade {
+    animation-duration: 10s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
 input[type="number"],
-input[type="date"]
-input[type="submit"]{
+input[type="date"],
+input[type="submit"] {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ccc;
+    border: #ccc solid 1px;
     border-radius: 5px;
 }
 
@@ -111,155 +145,9 @@ button {
     cursor: pointer;
 }
 
-.slideshow-container {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-}
-
-.mySlides {
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-image: url('../vliegWebsite/VliegWebsite/assets/img/slideshow1.png');
-    background-image: url('../vliegWebsite/VliegWebsite/assets/img/slideshow2.png');
-    background-image: url('../vliegWebsite/VliegWebsite/assets/img/slideshow3.jpeg');
-
-}
-
-.fade {
-    animation-duration: 10s;
-}
-
-@keyframes fade {
-    from {
-        opacity: .4;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 button:hover {
     background-color: darkblue;
 }
-.sale-widht{
-display: flex;
-justify-content: center;
-}
-.sale-box{
-    width: 80px;
-    height: 40px;
-    background-color: red;
-    color: rgb(255, 255, 255);
-}
-
-.sale-vlucht {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80vw;
-    height: 800px;
-}
-
-.sale-container {
-    display: flex;
-    width: 80%;
-    height: 80%;
-}
-
-.sale-left, .sale-right {
-    display: flex;
-    flex-direction: column;
-}
-
-.sale-left {
-    flex: 1;
-    margin-right: 40px;
-}
-
-.sale-vlucht1, .sale-vlucht2{
-    position: relative;
-    height: 400px;
-    margin-bottom: 40px;
-    background-size: cover;
-    background-position: center;
-    border: 2px solid #000000;
-    border-radius: 5px;
-}
-.sale-vlucht3{
-    position: relative;
-    height: 840px;
-    background-size: cover;
-    background-position: center;
-    border: 2px solid #000000;
-    border-radius: 5px;
-}
-
-.sale-vlucht2 {
-    margin-bottom: 0;
-}
-
-.sale-right {
-    flex: 1;
-}
-
-.sale-vlucht1 {
-    background-image: url('image1.jpg');
-}
-
-.sale-vlucht2 {
-    background-image: url('image2.jpg');
-}
-
-.sale-vlucht3 {
-    background-image: url('image3.jpg');
-}
-
-.vlucht4-mid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.sale-vlucht4 {
-    position: relative;
-    background-image: url('image4.jpg');
-    width: 64vw;
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-    border: 2px solid #000000;
-    border-radius: 5px;
-}
-
-.rood-doos {
-    position: absolute;
-    top: 70px;
-    left: 10px;
-    background-color: red;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 3px;
-    font-weight: bold;
-}
-
-.naam-vlucht {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: black;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 3px;
-    font-weight: bold;
-}
-
 
 form label {
     display: block;
@@ -274,7 +162,7 @@ form input[type="submit"] {
     width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: #ccc solid 1px;
     border-radius: 5px;
     font-size: 16px;
 }
@@ -297,10 +185,11 @@ table {
     background-color: white;
     border-collapse: collapse;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
 }
 
-th, td {
+th,
+td {
     padding: 10px;
     text-align: center;
 }
@@ -317,6 +206,7 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
     background-color: #ddd;
 }
+
 p {
     padding: 10px 0;
 }
@@ -330,7 +220,8 @@ a:hover {
     text-decoration: underline;
 }
 
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -353,8 +244,9 @@ a:hover {
     border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+    background-color: rgb(0, 0, 0, 0.8);
 }
 
 .overlay {
@@ -368,40 +260,44 @@ a:hover {
 
 .mooitekst {
     margin-bottom: 60px;
+}
 
-}
-.mooitekst p{
+.mooitekst p {
     border-radius: 5px;
-    background-color: rgb(171, 252, 252);
-    opacity: 5;
+    background-color: rgb(56, 56, 56, 0.329);
+    opacity: 1;
 }
-.formvliegut{
+
+.formvliegut {
     background-color: #00c3ff;
     border-radius: 10px;
 }
+
 .formvliegut form {
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translatey(15%);
 }
 
 .formvliegut input,
 .formvliegut button {
     margin: 0 5px;
-    width: calc(33.3% - 10px); 
+    max-width: 20vw;
+    width: calc(33.3% - 10px);
     padding: 10px;
-    border: 1px solid #ccc;
+    border: #ccc solid 1px;
     border-radius: 5px;
     font-size: 16px;
     margin-bottom: 20px;
 }
 
 .formvliegut input[type="date"] {
-    width: calc(33.3% - 12px); 
+    width: calc(33.3% - 12px);
 }
 
 .formvliegut button {
-    width: calc(33.3% - 10px); 
+    width: calc(33.3% - 10px);
     background-color: rgb(40, 187, 255);
     color: white;
     border: none;
@@ -414,107 +310,129 @@ a:hover {
     background-color: #0056b3;
 }
 
-
-.vakantie-deals {
-    width: 100%;
-    background-color: red;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    top: 50px;
-    z-index: 1;
-}
-
-.image-blocks {
+.sale-width {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
 }
 
-.block {
-    flex: 1 1 100%;
-    max-width: 100%;
-    margin: 10px;
+.sale-box {
+    width: 10vw;
+    height: 40px;
+    background-color: red;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+}
+
+.sale-box h2 {
+    margin: 0;
+    font-size: 1.2em; 
+}
+.sale-vlucht {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 800px;
+}
+
+.sale-container {
+    display: flex;
+    width: 80%;
+    height: 80%;
+}
+
+.sale-left,
+.sale-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.sale-left {
+    flex: 1;
+    margin-right: 40px;
+}
+
+.sale-vlucht1,
+.sale-vlucht2 {
     position: relative;
-    height: 200px;
-}
-
-@media (min-width: 600px) {
-    .block {
-        flex: 1 1 45%;
-        max-width: 45%;
-    }
-}
-
-@media (min-width: 900px) {
-    .block {
-        flex: 1 1 30%;
-        max-width: 30%;
-    }
-}
-
-.block.large {
-    flex: 1 1 100%;
-    height: 410px;
-}
-
-.image {
-    width: 100%;
-    height: 100%;
+    height: 400px;
+    margin-bottom: 40px;
     background-size: cover;
     background-position: center;
-    position: relative;
-    border-radius: 10px;
+    border: #000000 solid 2px;
+    border-radius: 5px;
 }
 
+.sale-vlucht3 {
+    position: relative;
+    height: 840px;
+    background-size: cover;
+    background-position: center;
+    border: #000000 solid 2px;
+    border-radius: 5px;
+}
 
+.sale-vlucht2 {
+    margin-bottom: 0;
+}
 
-.vakantie-deals {
+.sale-right {
+    flex: 1;
+}
+
+.sale-vlucht1 {
+    background-image: url("image1.jpg");
+}
+
+.sale-vlucht2 {
+    background-image: url("image2.jpg");
+}
+
+.sale-vlucht3 {
+    background-image: url("image3.jpg");
+}
+
+.vlucht4-mid {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 50px;
+    align-items: center;
 }
 
-.red-block {
-    width: 100%;
-    text-align: center;
-    background-color: red;
-    color: white;
-    padding: 10px 0;
-}
-
-.sale-block {
+.sale-vlucht4 {
     position: relative;
-    margin: 20px;
+    background-image: url("image4.jpg");
+    width: 64vw;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border: #000000 solid 2px;
+    border-radius: 5px;
 }
 
-.sale-block img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-    display: block;
-}
-
-.sale-badge {
+.rood-doos {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 70px;
+    left: 10px;
     background-color: red;
     color: white;
-    padding: 5px;
-    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: bold;
 }
 
-.footer-bar {
-    width: 100%;
-    height: 50px;
-    background-color: black;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+.naam-vlucht {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(0, 0, 0, 0.578);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-weight: bold;
 }
 
 .product-table {
@@ -523,89 +441,20 @@ a:hover {
     border-spacing: 20px;
 }
 
-.product-table td {
-    width: 30%;
-    padding: 10px;
-    text-align: center;
-}
-
-.product-wrapper {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
-}
-
-.product-name {
-    font-weight: bold;
-}
-
-.product-oms,
-.product-price,
-.product-cat {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.product-form {
-    margin-top: 10px;
-}
-
-.add-to-cart-btn {
-    background-color: #FFA500;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.add-to-cart-btn:hover {
-    background-color: #FF7F00;
-}
-
-.content-section {
-    display: none;
-}
-
-.content-section.active {
-    display: block;
-}
-.rijtje{
-background-color: aquamarine;
-
-}
-.section-form{
-    display:flex;
+.section-form {
+    display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 150px;
-}
-.veldje{
-    padding: 5px;
-}
-.section-form{
-    display: none;
-}
-.section-form.active{
-    display: block;
-}
-.mySlides{
-    background-image: url('../img/slideshow1.jpeg');
-    background-image: url('assets/img/slideshow2.png');
-    background-image: url('assets/img/slideshow3.jpeg');
 }
 
 .contact-form {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 60vw;
+    max-width: 70vw;
     margin-top: 30vh;
 }
 
@@ -627,10 +476,10 @@ background-color: aquamarine;
     color: #555;
 }
 
-.contact-veld input{
+.contact-veld input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: #ddd solid 1px;
     border-radius: 4px;
     font-size: 16px;
     max-width: 100%;
@@ -639,7 +488,7 @@ background-color: aquamarine;
 .contact-veld textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: #ddd solid 1px;
     border-radius: 4px;
     font-size: 16px;
     max-width: 100%;
@@ -679,44 +528,29 @@ background-color: aquamarine;
     z-index: 0;
 }
 
-
 .for-vervang {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
     background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-    display: block;
-}
-
-form input[type="text"],
-form input[type="number"],
-form input[type="date"]{
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
 }
 
 #registerform input[type="text"],
 #registerform input[type="email"],
 #registerform input[type="password"] {
-    width: calc(100% - 22px); 
+    width: calc(100% - 22px);
     padding: 10px;
     margin-bottom: 20px;
-    margin-right: 10px; 
-    border: 1px solid #ccc;
+    margin-right: 10px;
+    border: #ccc solid 1px;
     border-radius: 5px;
     font-size: 16px;
 }
+
 #registerform button[type="submit"] {
-    width: 100%; 
+    width: 100%;
     padding: 10px;
     border: none;
     background-color: rgb(40, 187, 255);
@@ -725,7 +559,6 @@ form input[type="date"]{
     cursor: pointer;
 }
 
-
 table {
     width: 100%;
     max-width: 800px;
@@ -733,10 +566,11 @@ table {
     background-color: white;
     border-collapse: collapse;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
 }
 
-th, td {
+th,
+td {
     padding: 10px;
     text-align: center;
 }
@@ -752,4 +586,59 @@ tbody tr:nth-child(even) {
 
 tbody tr:hover {
     background-color: #ddd;
+}
+.reis {
+    display: flex;
+    align-items: center;
+    width: 35vw;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reis-foto {
+    width: 20vw;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.reis-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reis-naam {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.reis-vertrek {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.reis-prijs {
+    font-size: 1.1em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.reis-form .reis-button {
+    padding: 10px;
+    border: none;
+    background-color: rgb(40, 187, 255);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reis-form .reis-button:hover {
+    background-color: #0056b3;
 }

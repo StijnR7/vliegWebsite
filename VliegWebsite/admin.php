@@ -17,7 +17,7 @@ include('createvlucht.php');
 <br><br><br>
 <h2>Create product</h2>
 <section class="for-vervang">
-<form action="vluchtCreate.php" method="post">
+<form action="createvlucht.php" method="post">
     <label for="bestemmingsStad">bestemmingsStad:</label>
     <input type="text" id="bestemmingsStad" name="bestemmingsStad">
     <label for="vertrekStad">vertrekStad:</label>

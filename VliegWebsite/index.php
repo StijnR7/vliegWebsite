@@ -1,3 +1,9 @@
+<?php
+include('connection.php');
+include('Delete.php'); 
+include('update.php');
+include('createvlucht.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +16,9 @@
     <?php include('header.php'); ?>
     <main>
         <div class="slideshow-container">
-
-
-            <div class="mySlides fade" style="background-image: url('../vliegWebsite/VliegWebsite/assets/img/Screenshot\ 2024-05-23\ 135248.png');"></div>
-            <div class="mySlides fade" style="background-image: url('../vliegWebsite/VliegWebsite/assets/img/Screenshot\ 2024-05-23\ 135248.png');"></div>
-            <div class="mySlides fade" style="background-image: url('../vliegWebsite/VliegWebsite/assets/img/images\ \(1\).jpeg');"></div> 
-
-
+            <div class="mySlides fade"></div>
+            <div class="mySlides fade"></div>
+            <div class="mySlides fade"></div> 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div> 
@@ -35,24 +37,24 @@
         </div>
             <br><br><br>
             <br><br><br>
+            <br><br><br>
             <section id="sale-widht">
             <div class="sale-box">
-                <h2>Sale</h2>
+                <h2>Vakantie Sale</h2>
              </div>
             </id>
-             <br><br><br>
             <br><br><br>
             <section class="sale-vlucht">
     <div class="sale-container">
         <div class="sale-left">
             <div class="sale-vlucht1">
-                <div class="rood-doos">€100</div>
+                <div class="rood-doos">999</div>
                 <div class="naam-vlucht">
                     <span>Amsterdam, Netherlands</span>
                 </div>
             </div>
             <div class="sale-vlucht2">
-                <div class="rood-doos">€200</div>
+                <div class="rood-doos">999</div>
                 <div class="naam-vlucht">
                     <span>Paris, France</span>
                 </div>
@@ -60,7 +62,7 @@
         </div>
         <div class="sale-right">
             <div class="sale-vlucht3">
-                <div class="rood-doos">€150</div>
+                <div class="rood-doos">998</div>
                 <div class="naam-vlucht">
                     <span>Berlin, Germany</span>
                 </div>
@@ -71,14 +73,15 @@
 <br>
 <div class="vlucht4-mid">
     <div class="sale-vlucht4">
-        <div class="rood-doos">€250</div>
+        <div class="rood-doos">799</div>
         <div class="naam-vlucht">
             <span>Rome, Italy</span>
         </div>
     </div>
 </div>
-
+</div
     </main> 
     <script src="assets/javascript/java.js"></script>
 </body>
+
 </html>

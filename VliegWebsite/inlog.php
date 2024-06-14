@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<div class="bod">
 <?php include ('header.php'); ?>
 
 <main>
@@ -46,5 +47,6 @@
 </main>
 
 <script src="assets/javascript.js/login.js"></script>
+</div>
 </body>
 </html>

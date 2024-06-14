@@ -43,20 +43,23 @@ elseif ($key1 == 'vertrekDatum'){
 }
 
 echo '<td>
-<div class="product-wrapper">
-<div class="product">
-<h2 class="product-name">'. $bestemmingsStad .'</h2>
-<p class="product-price">Prijs: €'. $Prijs .'</p>
-<form class="product-form" action="boekreis.php" method="POST">
-<input type="hidden" name="product_id" value="'. $vluchtID . '">
-<input type="hidden" name="prijs" value="'. $Prijs . '">
-<input type="hidden" name="vertrekDat" value="'. $vertrekDatum . '">
+<div class="reis">
+    <img src="" alt="Reis Foto" class="reis-foto">
+    <div class="reis-details">
+        <h2 class="reis-naam">'. $bestemmingsStad .', '. $bestemmingsLand .'</h2>
+        <p class="reis-vertrek">Vertrek: '. $vertrekDatum .'</p>
+        <p class="reis-prijs">Prijs: €'. $Prijs .'</p>
+        <form class="reis-form" action="boekreis.php" method="POST">
+            <input type="hidden" name="product_id" value="'. $vluchtID . '">
+            <input type="hidden" name="prijs" value="'. $Prijs . '">
+            <input type="hidden" name="vertrekDat" value="'. $vertrekDatum . '">
+            <input type="submit" value="Boek" class="reis-button">
+        </form>
+    </div>
+</div>
+</td>';
 
-<input type="submit" value="Boek" class="add-to-cart-btn">
-</form>
-</div>
-</div>
-</td>'; 
+echo '</tr>';
 }}
 
 ?>

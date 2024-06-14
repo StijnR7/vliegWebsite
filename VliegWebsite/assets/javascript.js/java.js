@@ -1,23 +1,14 @@
 let slideIndex = 0;
-const slides = document.querySelectorAll('.slide');
+showSlides();
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.transform = `translateX(${(i - index) * 100}%)`;
-    });
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 4000); 
 }
-
-function changeSlide(n) {
-    slideIndex = (slideIndex + n + slides.length) % slides.length;
-    showSlide(slideIndex);
-}
-
-function autoSlide() {
-    changeSlide(1);
-    setTimeout(autoSlide, 4000);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    showSlide(slideIndex);
-    autoSlide();
-});

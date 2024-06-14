@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<div class="bod">
     <?php include('header.php'); ?>
     <main>
       <?php include('zoekreisPHP') ?>
 
     </main>
     <script src="assets/javascript/java.js"></script>
+</div>
 </body>
 </html>
