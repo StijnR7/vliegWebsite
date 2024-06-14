@@ -541,7 +541,7 @@ a:hover {
 #registerform input[type="text"],
 #registerform input[type="email"],
 #registerform input[type="password"] {
-    width: calc(100% - 22px);
+    width: calc(100% - 22px);   
     padding: 10px;
     margin-bottom: 20px;
     margin-right: 10px;
@@ -587,6 +587,4 @@ tbody tr:nth-child(even) {
 
 tbody tr:hover {
     background-color: #ddd;
-=======
->>>>>>> Stashed changes
 }
