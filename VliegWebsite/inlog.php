@@ -8,7 +8,10 @@
 </head>
 <body>
 <div class="bod">
-<?php include ('header.php'); ?>
+<?php include ('header.php'); 
+
+
+?>
 
 <main>
     <div class="loginlijn">

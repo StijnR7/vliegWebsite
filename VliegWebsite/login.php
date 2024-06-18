@@ -11,7 +11,7 @@ $sql = "SELECT * FROM users WHERE username = '$user' and password = '$pass'";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 
-$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$result = $stmt->fetchAll();
     
 if($result == null){
 echo "fout";
@@ -19,29 +19,32 @@ echo "fout";
 
 }
 else{
-foreach($result AS $key => $value){
-foreach($value AS $key1 => $value1){
 
-if ($key1 == 'username'){
-  $user = $value1;
-}
-elseif ($key1 == 'password'){
-  $pass = $value1;
-}
-elseif ($key1 == 'email'){
-  $email = $value1;
-}
-elseif ($key1 == 'userID'){
-  $userID = $value1;
-}
+foreach($result AS $key1 => $value1){
+
+
+  $user = $value1['username'];
+
+
+  $pass = $value1['password'];
+
+
+  $email = $value1['email'];
+
+
+  $userID = $value1['userID'];
+
+
+  $perms = $value1['permissions'];
+
 
 }
 $_SESSION["username"] = $user;
 $_SESSION["userID"] = $userID;
 $_SESSION["password"] = $pass;
 $_SESSION["email"] = $email;
-
-include("index.php");
-}}
+$_SESSION["permissions"] = $perms;
+include('index.php');
+}
 
 ?>

@@ -61,9 +61,11 @@ nav {
 }
 
 .login {
+  
+    width: 20%;
     flex: 1;
-    display: flex;
-    justify-content: flex-end;
+    
+ 
 }
 
 .login img {

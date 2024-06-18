@@ -25,7 +25,7 @@ if (isset($_POST['register'])) {
 
         if ($stmt->execute()) {
             echo "Vlucht succesvol toegevoegd!";
-            header("Location: ../index.php");
+            header("Location: admin.php");
             exit();
         } else {
             echo "Er is een probleem opgetreden bij het toevoegen van de vlucht.";
