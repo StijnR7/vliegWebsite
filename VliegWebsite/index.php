@@ -1,9 +1,4 @@
-<?php
-include('connection.php');
-include('Delete.php'); 
-include('update.php');
-include('createvlucht.php');
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,8 +75,9 @@ include('createvlucht.php');
     </div>
 </div>
 </div
-    </main> 
+<?php include ("footer.php"); ?>
+</main> 
     <script src="assets/javascript/java.js"></script>
 </body>
-
 </html>
+

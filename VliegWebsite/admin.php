@@ -15,6 +15,7 @@ include('createvlucht.php');
 <br><br><br>
 <br><br><br>
 <br><br><br>
+
 <h2>Create product</h2>
 <section class="for-vervang">
 <form action="createvlucht.php" method="post">
@@ -57,7 +58,7 @@ include('createvlucht.php');
     <tbody>
         <?php
         $stmt = $conn->query("SELECT * FROM vlucht");
-        $vluchten = $stmt->fetchAll();
+        $vlucht = $stmt->fetchAll();
         foreach ($vluchten as $vlucht): ?>
             <tr>
                 <form action="update.php" method="post">
@@ -72,7 +73,7 @@ include('createvlucht.php');
                     <td><input type="submit" name="Update" value="update"></td>
                 </form>
                 <form action="Delete.php" method="post">
-                    <input type="hidden" name="vluchtID" value="<?php echo ($vlucht['vluchtID']); ?>">
+                    <R<input type="hidden" name="vluchtID" value="<?php echo ($vlucht['vluchtID']); ?>">
                     <td><input type="submit" name="Delete" value="Delete"></td>
                 </form>
             </tr>
