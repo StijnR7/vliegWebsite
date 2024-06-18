@@ -58,7 +58,7 @@ include('createvlucht.php');
     <tbody>
         <?php
         $stmt = $conn->query("SELECT * FROM vlucht");
-        $vlucht = $stmt->fetchAll();
+        $vluchten = $stmt->fetchAll();
         foreach ($vluchten as $vlucht): ?>
             <tr>
                 <form action="update.php" method="post">
@@ -73,13 +73,17 @@ include('createvlucht.php');
                     <td><input type="submit" name="Update" value="update"></td>
                 </form>
                 <form action="Delete.php" method="post">
-                    <R<input type="hidden" name="vluchtID" value="<?php echo ($vlucht['vluchtID']); ?>">
+                    <input type="hidden" name="vluchtID" value="<?php echo ($vlucht['vluchtID']); ?>">
                     <td><input type="submit" name="Delete" value="Delete"></td>
                 </form>
             </tr>
         <?php endforeach; ?>
     </tbody>
 </table>
+<form id="logUitKnop" action="logUit.php">
+                <button type="submit"></button>
+
+            </form>
 
 </body>
 </html>

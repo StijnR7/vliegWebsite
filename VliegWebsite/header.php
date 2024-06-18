@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+   <?php session_start(); ?>
     <div class="bod">
     <header>
         <nav>
@@ -19,7 +20,23 @@
                 <h1><a href="Contact.php">Contact</a></h1>
             </div>
             <div class="login">
-                <a href="inlog.php"><img src="assets/img/login.png"></a>
+                
+                <a id="loginFoto" href="<?php 
+                if(isset($_SESSION["permissions"])){
+                if($_SESSION["permissions"] == 1){
+                    echo "admin.php";
+
+                }
+                else{
+                    echo "account.php";
+
+                }}
+                else{
+                    echo "inlog.php";
+
+                }
+                
+                ?>"><img src="assets/img/login.png"></a>
             </div>
         </nav>
     </header>

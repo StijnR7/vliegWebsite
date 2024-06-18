@@ -1,6 +1,7 @@
 <?php
 include('connection.php');
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete'])) {
     if (isset($_POST['vluchtID'])) {
         $vluchtID = $_POST['vluchtID'];
@@ -12,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete'])) {
         } else {
             echo "Error deleting product: " . $stmt->errorInfo()[2];
         }
+
 
 }
 
