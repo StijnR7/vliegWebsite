@@ -79,6 +79,10 @@ include('createvlucht.php');
             <?php endforeach; ?>
     </tbody>
 </table>
+<form id="logUitKnop" action="logUit.php">
+                <button type="submit"></button>
+
+            </form>
 
 </body>
 </html>

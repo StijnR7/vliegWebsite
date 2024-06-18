@@ -3,6 +3,7 @@ include('connection.php');
 include('Delete.php'); 
 include('update.php');
 include('createvlucht.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,8 +31,14 @@ include('createvlucht.php');
 
                </tr>
             <?php endforeach; ?>
+
+            <form id="logUitKnop" action="logUit.php">
+                <button type="submit"></button>
+
+            </form>
     </main> 
     <script src="assets/javascript/java.js"></script>
+
 </body>
 
 </html>

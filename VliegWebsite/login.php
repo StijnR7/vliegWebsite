@@ -44,7 +44,7 @@ $_SESSION["userID"] = $userID;
 $_SESSION["password"] = $pass;
 $_SESSION["email"] = $email;
 $_SESSION["permissions"] = $perms;
-include('index.php');
+header("Location: index.php");
 }
 
 ?>
