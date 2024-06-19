@@ -8,43 +8,7 @@ function validateForm(event) {
         }
     });
     if (!isValid) {
-        alert("Please fill out all required fields.");
+        alert("Please fill out all required fields");
         event.preventDefault();
     }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    const forms = document.querySelectorAll("form");
-    forms.forEach(form => {
-        form.addEventListener("submit", validateForm);
-    });
-
-    
-    document.getElementById("registerLink").addEventListener("click", (event) => {
-        event.preventDefault();
-        document.getElementById("loginbak").style.display = "none";
-        document.getElementById("registerbak").style.display = "block";
-        document.getElementById("paswoordbak").style.display = "none";
-    });
-
-    document.getElementById("loginLink").addEventListener("click", (event) => {
-        event.preventDefault();
-        document.getElementById("loginbak").style.display = "block";
-        document.getElementById("registerbak").style.display = "none";
-        document.getElementById("paswoordbak").style.display = "none";
-    });
-
-    document.getElementById("vergeet").addEventListener("click", (event) => {
-        event.preventDefault();
-        document.getElementById("loginbak").style.display = "none";
-        document.getElementById("registerbak").style.display = "none";
-        document.getElementById("paswoordbak").style.display = "block";
-    });
-
-    document.getElementById("terugLink").addEventListener("click", (event) => {
-        event.preventDefault();
-        document.getElementById("loginbak").style.display = "block";
-        document.getElementById("registerbak").style.display = "none";
-        document.getElementById("paswoordbak").style.display = "none";
-    });
-});
