@@ -74,10 +74,12 @@
         </div>
     </div>
 </div>
-</div
-<?php include ("footer.php"); ?>
+</section>
+        </div>
 </main> 
+    
     <script src="assets/javascript/java.js"></script>
 </body>
+<script src="assets/javascript.js/form.js"></script> 
 </html>
 
