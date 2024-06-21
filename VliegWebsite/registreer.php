@@ -1,5 +1,5 @@
-<?php 
-include('connection.php');
+<?php
+include ('connection.php');
 
 
 $user = $_POST['username'];
@@ -13,4 +13,4 @@ $stmt = $conn->prepare($sql);
 $stmt->execute();
 
 
- ?>
+?>

@@ -1,5 +1,5 @@
 <?php
-include('connection.php');
+include ('connection.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $requiredKeys = ['vluchtID', 'bestemmingsStad', 'vertrekStad', 'bestemmingsLand', 'vertrekLand', 'reistijd', 'vertrekDatum', 'Prijs'];
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':reistijd', $reistijd);
         $stmt->bindParam(':vertrekDatum', $verstrekDatum);
         $stmt->bindParam(':Prijs', $Prijs);
-       
+
 
         if ($stmt->execute()) {
             echo "Vlucht succesvol geüpdatet.";
