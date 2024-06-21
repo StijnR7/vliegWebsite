@@ -3,21 +3,38 @@
 include('connection.php');
 
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['Delete'])) {
-    $flight_id = $_POST['vluchtID'];
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete'])) {
+    $vluchtID = $_POST['vluchtID'];
 
-    $stmt = $conn->prepare("DELETE FROM orderinfo WHERE vluchtID = :vluchtID");
-    $stmt->bindParam(':vluchtID', $flight_id);
-    $stmt->execute();
 
-    $stmt = $conn->prepare("DELETE FROM vlucht WHERE vluchtID = :vluchtID");
-    $stmt->bindParam(':vluchtID', $flight_id);
-    $stmt->execute();
+    $conn->beginTransaction();
 
-    echo "Record deleted successfully";
+    try {
+   
+        $sql = "DELETE FROM orderinfo WHERE vluchtID";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':vluchtID', $vluchtID);
+        $stmt->execute();
+
+        $sql = "DELETE FROM vlucht WHERE vluchtID";
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':vluchtID', $vluchtID);
+
+        if ($stmt->execute()) {
+          
+            $conn->commit();
+            echo "Vlucht succesvol verwijderd.";
+        } else {
+            
+            $conn->rollBack();
+            echo "Error deleting vlucht: " . $stmt->errorInfo()[2];
+        }
+    } catch (PDOException $e) {
+       
+        echo "Error: " . $e->getMessage();
+    }
 }
 
 $stmt = $conn->query("SELECT * FROM vlucht");
-$vlucht = $stmt->fetchAll();
-
+$vluchten = $stmt->fetchAll();
 ?>

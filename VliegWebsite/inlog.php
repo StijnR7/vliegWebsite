@@ -48,7 +48,7 @@
         </div>
     </div>
 </main>
-
+<script src="assets/javascript.js/form.js"></script>   
 <script src="assets/javascript.js/login.js"></script>
 </div>
 </body>

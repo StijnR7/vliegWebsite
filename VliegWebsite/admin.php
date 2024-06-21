@@ -97,5 +97,5 @@ include ('createvlucht.php');
     </form>
 
 </body>
-
+<script src="assets/javascript.js/form.js"></script>   
 </html>
