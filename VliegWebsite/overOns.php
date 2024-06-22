@@ -26,6 +26,6 @@ Welkom bij CTV, uw vertrouwde partner in luchtvaartreizen.<br> Wij zijn toegewij
 
       </section>
     </main> 
-    
+    <?php include("footer.php")?>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacteer Ons</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <?php include ('header.php'); ?>
@@ -36,7 +36,8 @@
         <div class="blue-line">0612345678</div>
         <div class="blue-line">mail</div>
         <div class="blue-line">locatie</div>
-        <div class="blue-line">?</div>
+        <div class="blue-line"> <a href="reviews.php">Go to Reviews</a></div>
     </div>
+    <?php include("footer.php")?>
 </body>
 </html>

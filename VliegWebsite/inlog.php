@@ -51,5 +51,6 @@
 <script src="assets/javascript.js/form.js"></script>   
 <script src="assets/javascript.js/login.js"></script>
 </div>
+<?php include("footer.php")?>
 </body>
 </html>

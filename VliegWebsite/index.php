@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,20 +8,14 @@
 </head>
 <body>
     <?php include('header.php'); ?>
-    <main>
-        <div class="slideshow-container">
-            <div class="mySlides fade"></div>
-            <div class="mySlides fade"></div>
-            <div class="mySlides fade"></div> 
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div> 
-      
-        <div class="overlay">
-            <div class="mooitekst">
-                <p>CTV vakantie planner is jouw sleutel tot perfecte vakanties</p>
-            </div>
-            <div class="formvliegut">
+    <div class="slideshow-container">
+        <img src="assets/img/homepage.webp" alt="foto">
+    </div>
+    <section class="overlay">
+        <div class="mooitekst">
+            <p>CTV vakantie planner is jouw sleutel tot perfecte vakanties</p>
+        </div>
+        <div class="formvliegut">
             <form id="rijtje" action="zoekreisPHP.php" method="GET">
                 <input name="vertrek" type="text" placeholder="Vertrekpunt">
                 <input name="bestemming" type="text" placeholder="Bestemming">
@@ -30,56 +23,48 @@
                 <button type="submit">Zoek</button>
             </form>
         </div>
-            <br><br><br>
-            <br><br><br>
-            <br><br><br>
-            <section id="sale-widht">
+        <section id="sale-width">
             <div class="sale-box">
                 <h2>Vakantie Sale</h2>
-             </div>
-            </id>
-            <br><br><br>
-            <section class="sale-vlucht">
-    <div class="sale-container">
-        <div class="sale-left">
-            <div class="sale-vlucht1">
-                <div class="rood-doos">999</div>
-                <div class="naam-vlucht">
-                    <span>Amsterdam, Netherlands</span>
+            </div>
+        </section>
+        <section class="sale-vlucht">
+            <div class="sale-container">
+                <div class="sale-left">
+                    <div class="sale-vlucht1" style="background-image: url('assets/img/vlucht1.webp');">
+                        <div class="rood-doos">€999</div>
+                        <div class="naam-vlucht">
+                            <span>Amsterdam, Netherlands</span>
+                        </div>
+                    </div>
+                    <div class="sale-vlucht2" style="background-image: url('assets/img/vlucht2.jpg');">
+                        <div class="rood-doos">€999</div>
+                        <div class="naam-vlucht">
+                            <span>Paris, France</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sale-right">
+                    <div class="sale-vlucht3" style="background-image: url('assets/img/slideshow1.jpeg');">
+                        <div class="rood-doos">€998</div>
+                        <div class="naam-vlucht">
+                            <span>Berlin, Germany</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="sale-vlucht2">
-                <div class="rood-doos">999</div>
+        </section>
+        <section class="vlucht4-mid">
+            <div class="sale-vlucht4" style="background-image: url('assets/img/slideshow1.jpeg');">
+                <div class="rood-doos">€799</div>
                 <div class="naam-vlucht">
-                    <span>Paris, France</span>
+                    <span>Rome, Italy</span>
                 </div>
             </div>
-        </div>
-        <div class="sale-right">
-            <div class="sale-vlucht3">
-                <div class="rood-doos">998</div>
-                <div class="naam-vlucht">
-                    <span>Berlin, Germany</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<br>
-<div class="vlucht4-mid">
-    <div class="sale-vlucht4">
-        <div class="rood-doos">799</div>
-        <div class="naam-vlucht">
-            <span>Rome, Italy</span>
-        </div>
-    </div>
-</div>
-</section>
-        </div>
-</main> 
-    
-    <script src="assets/javascript/java.js"></script>
+        </section>
+    </section>
+    <?php include("footer.php")?>
+    <script src="assets/javascript.js/form.js"></script>
 </body>
-<script src="assets/javascript.js/form.js"></script> 
-</html>
 
+</html>
