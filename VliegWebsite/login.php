@@ -5,10 +5,13 @@ $user = $_POST['username'];
 
 $pass = $_POST['password'];
 
-$sql = "SELECT * FROM users WHERE username = '$user' and password = '$pass'";
-
-
+$sql = "SELECT * FROM users WHERE username = :user and password = :pass";
 $stmt = $conn->prepare($sql);
+$stmt->bindParam(':user', $user);
+$stmt->bindParam(':pass', $pass);
+
+
+
 $stmt->execute();
 
 $result = $stmt->fetchAll();

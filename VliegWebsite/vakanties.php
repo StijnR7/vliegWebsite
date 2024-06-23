@@ -7,23 +7,23 @@ $sql = "SELECT * FROM vlucht";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 
-$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$result = $stmt->fetchAll();
 
 
-foreach ($result as $key => $value) {
-    foreach ($value as $key1 => $value1) {
-        if ($key1 == 'bestemmingsStad') {
-            $BestemmingsStad = $value1;
-        } elseif ($key1 == 'aankomstStad') {
-            $aankomstStad = $value1;
-        } elseif ($key1 == 'Prijs') {
-            $Prijs = $value1;
-        } elseif ($key1 == 'aankomstLand') {
-            $aankomstLand = $value1;
-        } elseif ($key1 == 'vluchtID') {
-            $id = $value1;
-        }
-    }
+
+    foreach ($result as $key1) {
+     
+            $BestemmingsStad = $key1['bestemmingsStad'];
+       
+            $aankomstStad = $key1['aankomstStad'];
+  
+            $Prijs = $key1['Prijs'];
+      
+            $aankomstLand = $key1['aankomstLand'];
+      
+            $id = $key1['vluchtID'];
+        
+    
 
     echo '<td>
  <div class="product-wrapper">

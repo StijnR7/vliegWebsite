@@ -8,6 +8,7 @@
                 <h1><a href="overOns.php">Over ons</a></h1>
                 <h1><a href="boek.php">Reizen</a></h1>
                 <h1><a href="Contact.php">Contact</a></h1>
+                <link rel="stylesheet" href="assets/css/style.css">
             </div>
             <div class="login">
                 <a id="loginFoto" href="<?php 
