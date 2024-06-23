@@ -17,6 +17,7 @@
             <?php include ('reizenZien.php'); ?>
         </table>
     </div>
+    <?php include("footer.php")?>
 </body>
 
 </html>

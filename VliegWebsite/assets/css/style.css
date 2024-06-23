@@ -10,23 +10,21 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    min-height: 100vh;
     margin: 0;
+    position: relative; 
 }
-
 header {
     display: flex;
     justify-content: center;
     position: fixed;
-    max-height: 100px;
     top: 20px;
     left: 10px;
     right: 10px;
     width: calc(100% - 20px);
-    background-color: rgb(255, 255, 255, 0.9);
+    background-color: rgb(255, 255, 255);
     border-radius: 15px;
     z-index: 1000;
-    box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 10px 20px;
 }
 
@@ -42,13 +40,16 @@ nav {
 }
 
 .logo img {
-    scale: 60%;
+    width: 110px; 
+    height: auto;
+    max-width: 100%; 
 }
 
 .bar {
     display: flex;
     justify-content: center;
-    gap: 7vw;
+    gap: 3vw; 
+    flex-grow: 2; 
 }
 
 .bar h1 a {
@@ -61,15 +62,16 @@ nav {
 }
 
 .login {
-  
-    width: 20%;
     flex: 1;
-    
- 
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
 }
 
 .login img {
-    scale: 15%;
+    width: 60px; 
+    height: auto;
+    max-width: 100%; 
 }
 
 .loginlijn {
@@ -82,59 +84,6 @@ nav {
     border-radius: 10px;
     text-align: center;
     margin-top: 250px;
-}
-
-.section {
-    display: none;
-}
-
-.section.active {
-    display: block;
-}
-
-.slideshow-container {
-    width: 100vw;
-    height: 800px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-}
-
-.mySlides {
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-image: url("../vliegWebsite/VliegWebsite/assets/img/slideshow1.png");
-    background-image: url("../vliegWebsite/VliegWebsite/assets/img/slideshow2.png");
-    background-image: url("../vliegWebsite/VliegWebsite/assets/img/slideshow3.jpeg");
-}
-
-.fade {
-    animation-duration: 10s;
-}
-
-@keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
-input[type="date"],
-input[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: #ccc solid 1px;
-    border-radius: 5px;
 }
 
 button {
@@ -222,51 +171,35 @@ a:hover {
     text-decoration: underline;
 }
 
-.prev,
-.next {
-    cursor: pointer;
+.slideshow-container {
+    width: 100vw;
+    height: 800px;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    user-select: none;
+    top: 0;
+    left: 0;
 }
 
-.prev {
-    left: 10px;
-    border-radius: 0 3px 3px 0;
-}
-
-.next {
-    right: 10px;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover,
-.next:hover {
-    background-color: rgb(0, 0, 0, 0.8);
+.slideshow-container img {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
 }
 
 .overlay {
     position: relative;
-    top: 500px;
-    width: 100%;
+    margin-top: 500px;
     text-align: center;
     color: white;
     z-index: 1;
 }
 
 .mooitekst {
-    margin-bottom: 60px;
+    margin-bottom: 90px;
 }
 
 .mooitekst p {
     border-radius: 5px;
-    background-color: rgb(56, 56, 56, 0.329);
+    background-color: rgba(56, 56, 56, 0.505);
     opacity: 1;
 }
 
@@ -325,13 +258,15 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; 
+    margin: 0 auto;
+    margin-top: 170px;
 }
 
 .sale-box h2 {
     margin: 0;
-    font-size: 1.2em; 
+    font-size: 1.2em;
 }
+
 .sale-vlucht {
     display: flex;
     justify-content: center;
@@ -386,15 +321,15 @@ a:hover {
 }
 
 .sale-vlucht1 {
-    background-image: url("image1.jpg");
+    background-image: url("assets/img/vlucht1.webp");
 }
 
 .sale-vlucht2 {
-    background-image: url("image2.jpg");
+    background-image: url("assets/img/vlucht2.jpeg");
 }
 
 .sale-vlucht3 {
-    background-image: url("image3.jpg");
+    background-image: url("assets/img/slideshow1.jpeg");
 }
 
 .vlucht4-mid {
@@ -405,7 +340,7 @@ a:hover {
 
 .sale-vlucht4 {
     position: relative;
-    background-image: url("image4.jpg");
+    background-image: url("assets/img/slideshow1.jpeg");
     width: 64vw;
     height: 400px;
     background-size: cover;
@@ -437,10 +372,40 @@ a:hover {
     font-weight: bold;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100vw; 
+    background-color: #00000084; 
+    color: white;
+    bottom: 0;
+    margin-top: 170px;
+}
+
+.voettekst-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.voettekst-rij {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+}
+
+.voettekst-kolom {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+
 .product-table {
     width: 100%;
-     
-   
     border-spacing: 20px;
     margin-top: 150px;  
 }
@@ -531,6 +496,14 @@ a:hover {
     left: 0;
     z-index: 0;
 }
+.section {
+        display: none;
+    }
+    
+.section.active {
+        display: block;
+    }
+    
 
 .for-vervang {
     max-width: 600px;
@@ -646,14 +619,19 @@ tbody tr:hover {
 .reis-form .reis-button:hover {
     background-color: #0056b3;
 }
+
 .voettekst-container{
     display: flex;
     justify-content: center;
+    background-color: #000000be;
     width: 100vw;
-    height: 40px;
+    color: white;
 }
 .voettekst-rij{
     width: 50%;
+}
+.voettekst-kolom p a{
+    color: white;
 }
 #overOnsContainer{
   
@@ -668,8 +646,6 @@ tbody tr:hover {
     height: 60%;
     border-radius: 15px;
     opacity: 40%;
-
-
 }
 #overOnsSection{
     display: flex;
@@ -677,8 +653,6 @@ tbody tr:hover {
     margin-top: 300px;
     width: 80vw;
     height: 750px;
-
-
 }
 #aboutUsTitel{
     font-size: 30px;
@@ -686,8 +660,7 @@ tbody tr:hover {
     margin: 20px;
 }
 #aboutUsText{
-    
-    position: absolute;
+position: absolute;
 display: flex;
 padding: 30px;
 align-items: center;
@@ -695,11 +668,99 @@ padding-top: 5%;
 line-height: 25px;
 text-align: center;
 
-
 }
-#logUitKnop{
-margin-top: 500px;
+.main-container {
+    margin-top: 120px;
+}
 
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.card-title {
+    font-size: 1.5rem;
+    color: #007bff;
+}
 
+.card-text {
+    font-size: 1.2rem;
+}
+
+#logoutForm button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+}
+.reis-info {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.reis-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.reis-info p {
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #555;
+}
+.main-container {
+    margin-top: 20px;
+}
+
+.review-form {
+    width: 40vw;
+    margin: 0 auto;
+    margin-top: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-form .form-group {
+    margin-bottom: 15px;
+}
+
+.review-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+.form-group textarea{
+    max-width: 38vw;
+    max-height: 400px;
+}
+.review-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.review-form .form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 5px rgba(18, 97, 181, 0.5);
+}
+
+.review-form .bsubmit {
+    background-color: #369aed;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.review-form .bsubmit:hover {
+    background-color: #009dff;
 }
