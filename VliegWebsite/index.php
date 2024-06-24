@@ -11,11 +11,11 @@
     <div class="slideshow-container">
         <img src="assets/img/homepage.webp" alt="foto">
     </div>
-    <section class="overlay">
-        <div class="mooitekst">
+    <section id="overlay">
+        <div id="mooitekst">
             <p>CTV vakantie planner is jouw sleutel tot perfecte vakanties</p>
         </div>
-        <div class="formvliegut">
+        <div id="formvliegut">
             <form id="rijtje" action="zoekreisPHP.php" method="GET">
                 <input name="vertrek" type="text" placeholder="Vertrekpunt">
                 <input name="bestemming" type="text" placeholder="Bestemming">
@@ -24,11 +24,11 @@
             </form>
         </div>
         <section id="sale-width">
-            <div class="sale-box">
+            <div id="sale-box">
                 <h2>Vakantie Sale</h2>
             </div>
         </section>
-        <section class="sale-vlucht">
+        <section id="sale-vlucht">
             <div class="sale-container">
                 <div class="sale-left">
                     <div class="sale-vlucht1" style="background-image: url('assets/img/vlucht1.webp');">
