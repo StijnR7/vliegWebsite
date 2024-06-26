@@ -1,5 +1,4 @@
 <?php session_start(); ?>
-<div class="bod">
     <header>
         <nav>
             <div class="logo"><a href="index.php"><img src="assets/img/logo.png" alt="Logo"></a></div>
@@ -27,4 +26,4 @@
             </div>
         </nav>
     </header>
-</div>
+
