@@ -11,7 +11,7 @@ if (isset($_POST['register'])) {
     $Prijs = $_POST['Prijs'];
     $Foto = "assets/img/" .  $_POST['Foto'];
 
-    try {
+
         $stmt = $conn->prepare("INSERT INTO vlucht (bestemmingsStad, vertrekStad, bestemmingsLand, vertrekLand, reistijd, vertrekDatum, Prijs, foto) VALUES (:bestemmingsStad, :vertrekStad, :bestemmingsLand, :vertrekLand, :reistijd, :vertrekDatum, :Prijs, :Foto)");
         
         $stmt->bindParam(':bestemmingsStad', $bestemmingsStad);
@@ -22,16 +22,7 @@ if (isset($_POST['register'])) {
         $stmt->bindParam(':vertrekDatum', $vertrekDatum);
         $stmt->bindParam(':Prijs', $Prijs);
         $stmt->bindParam(':Foto', $Foto);
+        $stmt->execute();}
+       
 
-        if ($stmt->execute()) {
-            echo "Vlucht succesvol toegevoegd!";
-            header("Location: admin.php");
-            exit();
-        } else {
-            echo "Er is een probleem opgetreden bij het toevoegen van de vlucht.";
-        }
-    } catch (PDOException $e) {
-        echo "Databasefout: " . $e->getMessage();
-    }
-}
 ?>
