@@ -62,9 +62,31 @@ include ('createvlucht.php');
                 <th>Prijs</th>
                 <th>Update</th>
                 <th>Delete</th>
+                </tr>
+    </thead>
+    <tbody>
+        <?php
+        $stmt = $conn->query("SELECT * FROM vlucht");
+        $vluchten = $stmt->fetchAll();
+        foreach ($vluchten as $vlucht): ?>
+            <tr>
+                <form action="update.php" method="post">
+                    <td><input type="text" name="vluchtID" value="<?php echo ($vlucht['vluchtID']); ?>"></td>
+                    <td><input type="text" name="bestemmingsStad" value="<?php echo ($vlucht['bestemmingsStad']); ?>"></td>
+                    <td><input type="text" name="vertrekStad" value="<?php echo ($vlucht['vertrekStad']); ?>"></td>
+                    <td><input type="text" name="bestemmingsLand" value="<?php echo ($vlucht['bestemmingsLand']); ?>"></td>
+                    <td><input type="text" name="vertrekLand" value="<?php echo ($vlucht['vertrekLand']); ?>"></td>
+                    <td><input type="number" name="reistijd" value="<?php echo ($vlucht['reistijd']); ?>"></td>
+                    <td><input type="date" name="vertrekDatum" value="<?php echo ($vlucht['vertrekDatum']); ?>"></td>
+                    <td><input type="number" name="Prijs" value="<?php echo ($vlucht['Prijs']); ?>"></td>
+                    <td><input type="submit" name="Update" value="update"></td>
+                </form>
+                <form action="Delete.php" method="post">
+                    <input type="hidden" name="vluchtID" value="<?php echo ($vlucht['vluchtID']); ?>">
+                    <td><input type="submit" name="Delete" value="Delete"></td>
+                </form>
             </tr>
-        </thead>
-        <tbody>
+        <?php endforeach; ?>
             <?php
             $stmt = $conn->query("SELECT * FROM vlucht");
             $vluchten = $stmt->fetchAll();
@@ -72,11 +94,9 @@ include ('createvlucht.php');
                 <tr>
                     <form action="update.php" method="post">
                         <td><input type="text" name="vluchtID" value="<?php echo ($vlucht['vluchtID']); ?>"></td>
-                        <td><input type="text" name="bestemmingsStad" value="<?php echo ($vlucht['bestemmingsStad']); ?>">
-                        </td>
+                        <td><input type="text" name="bestemmingsStad" value="<?php echo ($vlucht['bestemmingsStad']); ?>"></td>
                         <td><input type="text" name="vertrekStad" value="<?php echo ($vlucht['vertrekStad']); ?>"></td>
-                        <td><input type="text" name="bestemmingsLand" value="<?php echo ($vlucht['bestemmingsLand']); ?>">
-                        </td>
+                        <td><input type="text" name="bestemmingsLand" value="<?php echo ($vlucht['bestemmingsLand']); ?>"></td>
                         <td><input type="text" name="vertrekLand" value="<?php echo ($vlucht['vertrekLand']); ?>"></td>
                         <td><input type="number" name="reistijd" value="<?php echo ($vlucht['reistijd']); ?>"></td>
                         <td><input type="date" name="vertrekDatum" value="<?php echo ($vlucht['vertrekDatum']); ?>"></td>
@@ -89,8 +109,8 @@ include ('createvlucht.php');
                     </form>
                 </tr>
             <?php endforeach; ?>
-        </tbody>
-    </table>
+    </tbody>
+</table>
     <form id="logUitKnop" action="logUit.php">
         <button type="submit"></button>
 
