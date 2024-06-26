@@ -2,7 +2,7 @@
 <div class="voettekst-container">
     <div class="voettekst-rij">
         <div class="voettekst-kolom">
-            <p>© 2024 Your Company</p>
+            <p>CTV</p>
         </div>
         <div class="voettekst-kolom">
             <p>Privacy Policy</p>
