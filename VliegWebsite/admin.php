@@ -91,7 +91,7 @@ include ('createvlucht.php');
     </tbody>
 </table>
     <form id="logUitKnop" action="logUit.php">
-        <button type="submit"></button>
+        <button type="submit">Logout</button>
 
     </form>
 

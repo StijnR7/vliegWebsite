@@ -5,7 +5,7 @@ $bestemming = $_GET["bestemming"];
 $vertrek = $_GET["vertrek"];
 $vertrekDat = $_GET["verDatum"];
 
-if(isset($_GET["bestemming"]) && isset($_GET["vertrek"]) && isset($_GET["verDatum"])){
+if(isset($_GET["bestemming"]) && isset($_GET["vertrek"]) && isset($_GET["verDatum"]) && $_GET["verDatum"] != null){
 $sql = "SELECT * FROM vlucht
  WHERE  bestemmingsStad = '$bestemming' AND vertrekStad = '$vertrek'  AND vertrekDatum = '$vertrekDat'
  OR bestemmingsLand = '$bestemming' AND vertrekland = '$vertrek' AND vertrekDatum = '$vertrekDat' ";
