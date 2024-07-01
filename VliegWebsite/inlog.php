@@ -8,10 +8,7 @@
 </head>
 <body>
 <div class="bod">
-<?php include ('header.php'); 
-
-
-?>
+<?php include ('header.php'); ?>
 
 <main>
     <div class="loginlijn">
@@ -48,9 +45,7 @@
         </div>
     </div>
 </main>
-<script src="assets/javascript.js/form.js"></script>   
+
 <script src="assets/javascript.js/login.js"></script>
-</div>
-<?php include("footer.php")?>
 </body>
 </html>

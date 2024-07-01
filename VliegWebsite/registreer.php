@@ -11,7 +11,6 @@ VALUES (:user, :email, :pass) ";
 $stmt->bindParam(':user', $user);
 $stmt->bindParam(':email', $email);
 $stmt->bindParam(':pass', $pass);
-
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 
